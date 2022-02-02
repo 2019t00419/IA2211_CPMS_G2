@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ia2211_cpms_g2.HelloController">
+<VBox alignment="CENTER" prefHeight="468.0" prefWidth="679.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ia2211_cpms_g2.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <TextField centerShape="false" prefHeight="0.0" prefWidth="571.0" scaleShape="false" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <Label fx:id="welcomeText" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
+   <Button alignment="TOP_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="85.0" text="Button" />
 </VBox>
