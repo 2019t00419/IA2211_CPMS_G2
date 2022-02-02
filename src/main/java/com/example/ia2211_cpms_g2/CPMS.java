@@ -15,6 +15,7 @@ public class CPMS extends Application {
         stage.setTitle("UOC Car Park Management System");
         stage.setScene(scene);
         stage.show();
+        //test
     }
 
     public static void main(String[] args) {
