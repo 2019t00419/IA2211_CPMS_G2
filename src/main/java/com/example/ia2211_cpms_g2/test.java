@@ -38,7 +38,7 @@ public class test {
     @FXML
     void onSelectTech(ActionEvent event) {
         Faculty.name="Technology";
-        Faculty.noSpots=20;
+        Faculty.noSpots=2;
         facSelect.setText(Faculty.name);
         welcomeText1.setText(String.valueOf(Faculty.noSpots));
 
@@ -46,7 +46,7 @@ public class test {
     @FXML
     void onSelectLaw(ActionEvent event) {
         Faculty.name="Law";
-        Faculty.noSpots=30;
+        Faculty.noSpots=2;
         facSelect.setText(Faculty.name);
         welcomeText1.setText(String.valueOf(Faculty.noSpots));
 
@@ -56,8 +56,26 @@ public class test {
     @FXML
     void onClickEnter(ActionEvent event) {
         newVehicle.Lplate=LPlateID.getText();
+        FacultyCarPark.Spot[1]="yes";
         FacultyCarPark.Spot[0]="yes";
-        welcomeText1.setText(FacultyCarPark.Spot[0]);
+        int i=0;
+        while (i<2) {
+            if (FacultyCarPark.Spot[i] == "no") {
+                welcomeText1.setText(String.valueOf(i));
+                break;
+            }
+            else {
+                welcomeText1.setText("no space");
+            }
+            i=i+1;
+        }
+        /*while (i<(Faculty.noSpots)){
+        if (FacultyCarPark.Spot[i]=="no"){
+            welcomeText1.setText(String.valueOf(i));
+
+        }
+       else {welcomeText1.setText("no");}
+       i=i+1;}*/
 
     }
 
