@@ -8,14 +8,22 @@ import javafx.scene.control.TextField;
 
 public class test {
 
-    faculty Faculty =new faculty();
-    CarPark FacultyCarPark = new CarPark();
-    Vehicle newVehicle= new Vehicle();
+    @FXML
+    private TextField LPlateID;
+
+    @FXML
+    private MenuButton facSelect;
+
     @FXML
     private Label welcomeText1;
 
     @FXML
-    private MenuButton facSelect;
+    private Label welcomeText2;
+
+
+    faculty Faculty =new faculty();
+    CarPark FacultyCarPark = new CarPark();
+    Vehicle newVehicle= new Vehicle();
 
     @FXML
     void onSelectScience(ActionEvent event) {
@@ -45,7 +53,7 @@ public class test {
 
     @FXML
     void onClickEnter(ActionEvent event) {
-      //  newVehicle.Lplate= LPlateID.getText();
+        newVehicle.Lplate=LPlateID.getText();
         welcomeText1.setText(newVehicle.Lplate);
 
     }

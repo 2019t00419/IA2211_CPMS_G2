@@ -70,7 +70,8 @@
             <Label text="License Plate" GridPane.rowIndex="1" />
             <Label text="Type" GridPane.rowIndex="2" />
             <Label text="Special Notices" GridPane.rowIndex="3" />
-            <TextField fx:id="LPlateID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="LPlateID"  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
             <Label text="Handicapped" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Allocated Parking Spot" GridPane.rowIndex="6" />
             <Label prefHeight="18.0" prefWidth="158.0" text="A" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="6" />
@@ -78,7 +79,6 @@
             <Label text="Type" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <Label text="Parking Spot" GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <Button prefHeight="62.0" prefWidth="171.0" text="Exit" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <Label text="Long Vehicle" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         </children>
     </GridPane>
