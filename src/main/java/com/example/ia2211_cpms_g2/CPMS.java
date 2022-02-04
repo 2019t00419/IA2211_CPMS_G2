@@ -10,8 +10,8 @@ import java.io.IOException;
 public class CPMS extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CPMS.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 852, 480);
+        FXMLLoader fxmlLoader = new FXMLLoader(CPMS.class.getResource("GUI.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("UOC Car Park Management System");
         stage.setScene(scene);
         stage.show();
