@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Light;
 
 public class test {
 
@@ -31,6 +32,7 @@ public class test {
         Faculty.noSpots=2;
         facSelect.setText(Faculty.name);
         welcomeText1.setText(String.valueOf(Faculty.noSpots));
+
     }
 
     @FXML
@@ -54,7 +56,8 @@ public class test {
     @FXML
     void onClickEnter(ActionEvent event) {
         newVehicle.Lplate=LPlateID.getText();
-        welcomeText1.setText(newVehicle.Lplate);
+        FacultyCarPark.Spot[0]="yes";
+        welcomeText1.setText(FacultyCarPark.Spot[0]);
 
     }
 
