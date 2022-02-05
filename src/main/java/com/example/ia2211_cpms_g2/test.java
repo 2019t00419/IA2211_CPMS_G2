@@ -95,7 +95,7 @@ public class test {
     faculty Science = new faculty();
     faculty Law = new faculty();
     faculty Technology= new faculty();
-    Vehicle newVehicle= new Vehicle();
+    Vehicle newVehicle= new Vehicle();s
     String PType;
 
 
