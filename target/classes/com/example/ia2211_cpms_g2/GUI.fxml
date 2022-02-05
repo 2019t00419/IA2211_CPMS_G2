@@ -16,7 +16,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <Label fx:id="welcomeText1" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
-    <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
+    <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="29.0" prefWidth="858.0" text="UOC Car Park Management System" textAlignment="CENTER" />
     <GridPane prefHeight="60.0" prefWidth="826.0">
         <columnConstraints>
             <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -138,23 +138,21 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
-            <Label prefHeight="2.0" prefWidth="33.0" text="A" />
-            <Label text="A" GridPane.columnIndex="1" />
-            <Label text="A" GridPane.columnIndex="2" />
-            <Label text="A" GridPane.columnIndex="3" />
-            <Label text="A" GridPane.columnIndex="4" />
-            <Label text="A" GridPane.columnIndex="5" />
-            <Label text="A" GridPane.columnIndex="6" />
-            <Label text="A" GridPane.columnIndex="7" />
-            <Label text="A" GridPane.columnIndex="8" />
-            <Label text="A" GridPane.columnIndex="9" />
-            <Label text="A" GridPane.columnIndex="10" />
+            <Label fx:id="PS1" text="A" />
+            <Label fx:id="PS2" text="A" GridPane.columnIndex="1" />
+            <Label fx:id="PS3" text="A" GridPane.columnIndex="2" />
+            <Label fx:id="PS4" text="A" GridPane.columnIndex="3" />
+            <Label fx:id="PS5" text="A" GridPane.columnIndex="4" />
+            <Label fx:id="PS6" text="A" GridPane.columnIndex="5" />
+            <Label fx:id="PS7" text="A" GridPane.columnIndex="6" />
+            <Label fx:id="PS8" text="A" GridPane.columnIndex="7" />
+            <Label fx:id="PS9" text="A" GridPane.columnIndex="8" />
+            <Label fx:id="PS10" text="A" GridPane.columnIndex="9" />
         </children>
     </GridPane>
 </VBox>

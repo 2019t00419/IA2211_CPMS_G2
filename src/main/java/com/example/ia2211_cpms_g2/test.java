@@ -60,12 +60,97 @@ public class test {
     @FXML
     private Label welcomeText2;
 
+    @FXML
+    private Label PS1;
+
+    @FXML
+    private Label PS10;
+
+    @FXML
+    private Label PS2;
+
+    @FXML
+    private Label PS3;
+
+    @FXML
+    private Label PS4;
+
+    @FXML
+    private Label PS5;
+
+    @FXML
+    private Label PS6;
+
+    @FXML
+    private Label PS7;
+
+    @FXML
+    private Label PS8;
+
+    @FXML
+    private Label PS9;
+
+
     faculty active = new faculty();
     faculty Science = new faculty();
     faculty Law = new faculty();
     faculty Technology= new faculty();
     Vehicle newVehicle= new Vehicle();
     String PType;
+
+
+    public void setDisplay() {
+        if (active.Spot[1] == "standard") {
+            PS1.setText("Available");
+        } else {
+            PS1.setText(active.Spot[1]);
+        }
+        if (active.Spot[2] == "standard") {
+            PS2.setText("Available");
+        } else {
+            PS2.setText(active.Spot[2]);
+        }
+        if (active.Spot[3] == "standard") {
+            PS3.setText("Available");
+        } else {
+            PS3.setText(active.Spot[3]);
+        }
+        if (active.Spot[4] == "standard") {
+            PS4.setText("Available");
+        } else {
+            PS4.setText(active.Spot[4]);
+        }
+        if (active.Spot[5] == "standard") {
+            PS5.setText("Available");
+        } else {
+            PS5.setText(active.Spot[5]);
+        }
+        if (active.Spot[6] == "standard") {
+            PS6.setText("Available");
+        } else {
+            PS6.setText(active.Spot[6]);
+        }
+        if (active.Spot[7] == "standard") {
+            PS7.setText("Available");
+        } else {
+            PS7.setText(active.Spot[7]);
+        }
+        if (active.Spot[8] == "long vehicle") {
+            PS8.setText("Available");
+        } else {
+            PS8.setText(active.Spot[8]);
+        }
+        if (active.Spot[9] == "long vehicle") {
+            PS9.setText("Available");
+        } else {
+            PS9.setText(active.Spot[9]);
+        }
+        if (active.Spot[10] == "handicapped") {
+            PS10.setText("Available");
+        } else {
+            PS10.setText(active.Spot[10]);
+        }
+    }
 
     @FXML
     void onSelectScience(ActionEvent event) {
@@ -126,6 +211,7 @@ public class test {
         }
         welcomeText2.setText(active.Spot[0]+" "+active.Spot[1]+" "+active.Spot[2]+" "+active.Spot[3]+" "+active.Spot[4]+" "+active.Spot[5]+" "+active.Spot[6]+" "+active.Spot[7]+" "+active.Spot[8]+" "+active.Spot[9]+" "+active.Spot[10]);
         LPlateID.setText("");
+        setDisplay();
     }
 
     @FXML
