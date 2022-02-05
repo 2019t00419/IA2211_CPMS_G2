@@ -4,12 +4,52 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 public class test {
 
     @FXML
+    private MenuItem LPlate1;
+
+    @FXML
+    private MenuItem LPlate10;
+
+    @FXML
+    private MenuItem LPlate2;
+
+    @FXML
+    private MenuItem LPlate3;
+
+    @FXML
+    private MenuItem LPlate4;
+
+    @FXML
+    private MenuItem LPlate5;
+
+    @FXML
+    private MenuItem LPlate6;
+
+    @FXML
+    private MenuItem LPlate7;
+
+    @FXML
+    private MenuItem LPlate8;
+
+    @FXML
+    private MenuItem LPlate9;
+
+    @FXML
     private TextField LPlateID;
+
+    @FXML
+    private Label LPlateIDisplay;
+
+    @FXML
+    private MenuButton LPlateSelect;
+
+    @FXML
+    private MenuButton TypeSelect;
 
     @FXML
     private MenuButton facSelect;
@@ -20,63 +60,137 @@ public class test {
     @FXML
     private Label welcomeText2;
 
-
-    faculty Faculty =new faculty();
-    CarPark FacultyCarPark = new CarPark();
+    faculty active = new faculty();
+    faculty Science = new faculty();
+    faculty Law = new faculty();
+    faculty Technology= new faculty();
     Vehicle newVehicle= new Vehicle();
+    String PType;
 
     @FXML
     void onSelectScience(ActionEvent event) {
-        Faculty.name="science";
-        Faculty.noSpots=2;
-        facSelect.setText(Faculty.name);
-        welcomeText1.setText(String.valueOf(Faculty.noSpots));
+        Science.name="Science";
+        active.noSpots=Science.noSpots=10;
+        Science.Spot[0]= Science.name;
+        active.Spot=Science.Spot;
+        facSelect.setText(Science.name);
 
     }
 
     @FXML
     void onSelectTech(ActionEvent event) {
-        Faculty.name="Technology";
-        Faculty.noSpots=2;
-        facSelect.setText(Faculty.name);
-        welcomeText1.setText(String.valueOf(Faculty.noSpots));
-
+        Technology.name="Technology";
+        active.noSpots=Technology.noSpots=10;
+        Technology.Spot[0]= Technology.name;
+        active.Spot=Technology.Spot;
+        facSelect.setText(Technology.name);
     }
     @FXML
     void onSelectLaw(ActionEvent event) {
-        Faculty.name="Law";
-        Faculty.noSpots=2;
-        facSelect.setText(Faculty.name);
-        welcomeText1.setText(String.valueOf(Faculty.noSpots));
-
+        Law.name="Law";
+        active.noSpots=Law.noSpots=10;
+        Law.Spot[0]= Law.name;
+        active.Spot=Law.Spot;
+        facSelect.setText(Law.name);
     }
 
 
     @FXML
-    void onClickEnter(ActionEvent event) {
+    void onClickEnter(ActionEvent event)
+    {
         newVehicle.Lplate=LPlateID.getText();
-        FacultyCarPark.Spot[1]="yes";
-        FacultyCarPark.Spot[0]="yes";
-        int i=0;
-        while (i<2) {
-            if (FacultyCarPark.Spot[i] == "no") {
-                welcomeText1.setText(String.valueOf(i));
-                break;
+        if (newVehicle.Lplate!="")
+        {
+            int i = 1;
+            while (i < (active.noSpots+1) ){
+                if (active.Spot[i] ==PType) {
+                    welcomeText1.setText(String.valueOf(i));
+                    active.Spot[i] = newVehicle.Lplate;
+                    LPlate1.setText(active.Spot[1]);
+                    LPlate2.setText(active.Spot[2]);
+                    LPlate3.setText(active.Spot[3]);
+                    LPlate4.setText(active.Spot[4]);
+                    LPlate5.setText(active.Spot[5]);
+                    LPlate6.setText(active.Spot[6]);
+                    LPlate7.setText(active.Spot[7]);
+                    LPlate8.setText(active.Spot[8]);
+                    LPlate9.setText(active.Spot[9]);
+                    LPlate10.setText(active.Spot[10]);
+                    break;
+                }
+                else {
+                    welcomeText1.setText("no space");
+                }
+                i = i + 1;
             }
-            else {
-                welcomeText1.setText("no space");
-            }
-            i=i+1;
         }
-        /*while (i<(Faculty.noSpots)){
-        if (FacultyCarPark.Spot[i]=="no"){
-            welcomeText1.setText(String.valueOf(i));
-
-        }
-       else {welcomeText1.setText("no");}
-       i=i+1;}*/
-//comment
+        welcomeText2.setText(active.Spot[0]+" "+active.Spot[1]+" "+active.Spot[2]+" "+active.Spot[3]+" "+active.Spot[4]+" "+active.Spot[5]+" "+active.Spot[6]+" "+active.Spot[7]+" "+active.Spot[8]+" "+active.Spot[9]+" "+active.Spot[10]);
+        LPlateID.setText("");
     }
 
+    @FXML
+    void onSelectStandard(ActionEvent event) {
+        PType="standard";
+        TypeSelect.setText("Standard");
+    }
+    @FXML
+    void onSelectLong(ActionEvent event) {
+        PType="long vehicle";
+        TypeSelect.setText("Long Vehicle");
+    }
+    @FXML
+    void onSelectHandi(ActionEvent event) {
+        PType="handicapped";
+        TypeSelect.setText("Handicapped");
+    }
+    @FXML
+    void onSelectV1(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV10(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV2(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV3(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV4(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV5(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV6(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV7(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV8(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSelectV9(ActionEvent event) {
+
+    }
 
 }

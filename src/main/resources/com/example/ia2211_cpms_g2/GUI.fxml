@@ -16,6 +16,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <Label fx:id="welcomeText1" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
+    <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
     <GridPane prefHeight="60.0" prefWidth="826.0">
         <columnConstraints>
             <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -73,14 +74,18 @@
            </rowConstraints>
             <children>
                   <Label text="License Plate" />
-                  <Label text="Type" GridPane.rowIndex="1" />
-                  <Label text="Special Notices" GridPane.rowIndex="2" />
+                  <Label text="Parking Spot Type" GridPane.rowIndex="1" />
                   <TextField fx:id="LPlateID" GridPane.columnIndex="1" />
-                  <Label text="Handicapped" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="Long Vehicle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Label text="Allocated Parking Spot" GridPane.rowIndex="4" />
                   <Label prefHeight="18.0" prefWidth="158.0" text="A" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Button onAction="#onClickEnter" prefHeight="46.0" prefWidth="166.0" text="Enter" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <MenuButton fx:id="TypeSelect" mnemonicParsing="false" text="Type" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <items>
+                     <MenuItem mnemonicParsing="false" onAction="#onSelectStandard" text="Standard" />
+                     <MenuItem mnemonicParsing="false" onAction="#onSelectLong" text="Long Vehicle" />
+                     <MenuItem mnemonicParsing="false" onAction="#onSelectHandi" text="Handicapped" />
+                  </items>
+               </MenuButton>
             </children>
          </GridPane>
          <GridPane GridPane.columnIndex="2">
@@ -98,10 +103,24 @@
            </rowConstraints>
             <children>
                   <Label text="License Plate" />
-                  <Label text="Parking Spot" GridPane.rowIndex="2" />
-                  <Label text="Type" GridPane.rowIndex="1" />
+                  <Label text="Parking Spot" GridPane.rowIndex="3" />
+                  <Label text="Type" GridPane.rowIndex="2" />
                   <Button prefHeight="62.0" prefWidth="171.0" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-               <TextField fx:id="LPlateID1" GridPane.columnIndex="1" />
+               <MenuButton fx:id="LPlateSelect" mnemonicParsing="false" text="Select Vehicle" GridPane.columnIndex="1">
+                  <items>
+                      <MenuItem fx:id="LPlate1" mnemonicParsing="false" onAction="#onSelectV1" text="Available" />
+                      <MenuItem fx:id="LPlate2" mnemonicParsing="false" onAction="#onSelectV2" text="Available" />
+                      <MenuItem fx:id="LPlate3" mnemonicParsing="false" onAction="#onSelectV3" text="Available" />
+                      <MenuItem fx:id="LPlate4" mnemonicParsing="false" onAction="#onSelectV4" text="Available" />
+                      <MenuItem fx:id="LPlate5" mnemonicParsing="false" onAction="#onSelectV5" text="Available" />
+                      <MenuItem fx:id="LPlate6" mnemonicParsing="false" onAction="#onSelectV6" text="Available" />
+                      <MenuItem fx:id="LPlate7" mnemonicParsing="false" onAction="#onSelectV7" text="Available" />
+                      <MenuItem fx:id="LPlate8" mnemonicParsing="false" onAction="#onSelectV8" text="Available" />
+                      <MenuItem fx:id="LPlate9" mnemonicParsing="false" onAction="#onSelectV9" text="Available" />
+                      <MenuItem fx:id="LPlate10" mnemonicParsing="false" onAction="#onSelectV10" text="Available" />
+                  </items>
+               </MenuButton>
+               <Label fx:id="LPlateIDisplay" text="License Plate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
          </GridPane>
       </children>
