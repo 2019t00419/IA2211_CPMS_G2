@@ -4,5 +4,5 @@ public class faculty {
     String name;
     int noSpots,noStandardSpots,noLongSpots,noHandiSpots;
     String[] Spot = {"ID", "", "", "", "","","","","","",""};
-    String[] SpotType = {"ID", "", "", "", "","","","","","",""};
+    String[] SpotGPS = {"ID", "", "", "", "","","","","","",""};
 }

@@ -20,27 +20,40 @@
     <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="29.0" prefWidth="858.0" text="UOC Car Park Management System" textAlignment="CENTER" />
     <GridPane prefHeight="60.0" prefWidth="826.0">
         <columnConstraints>
-            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="409.4000244140625" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.39996337890625" minWidth="10.0" prefWidth="101.20002441406251" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.5999755859375" minWidth="10.0" prefWidth="311.5999755859375" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="599.2000305175782" minWidth="10.0" prefWidth="307.2" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.19997558593747" minWidth="10.0" prefWidth="389.59999999999997" />
         </columnConstraints>
         <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
-            <Label text="Faculty " />
-            <MenuButton fx:id="facSelect" mnemonicParsing="false" text="Select Faculty" GridPane.columnIndex="1">
+            <Label text="Parking Area" GridPane.rowIndex="1" />
+            <MenuButton fx:id="parkSelect" mnemonicParsing="false" text="Select Parking Area" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <items>
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="Science" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="Technology" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectLaw" text="Law" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectMedicine" text="Medicine" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectUCSC" text="UCSC" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectEngineering" text="Engineering" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectNursing" text="Nursing" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="Sripalee Campus" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="A" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="B" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectLaw" text="C" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectMedicine" text="D" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectUCSC" text="E" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectEngineering" text="F" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectNursing" text="G" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="H" />
                 </items>
             </MenuButton>
+         <MenuButton fx:id="parkSelect1" mnemonicParsing="false" text="Select Parking Area" GridPane.columnIndex="1">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="Science" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="Technology" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectLaw" text="Law" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectMedicine" text="Medicine" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectUCSC" text="UCSC" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectEngineering" text="Engineering" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectNursing" text="Nursing" />
+               <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="Sripalee Campus" />
+            </items>
+         </MenuButton>
+         <Label text="Faculty" />
         </children>
     </GridPane>
     <GridPane>

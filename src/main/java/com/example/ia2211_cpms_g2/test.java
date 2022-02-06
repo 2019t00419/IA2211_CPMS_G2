@@ -52,7 +52,7 @@ public class test {
     private MenuButton TypeSelect;
 
     @FXML
-    private MenuButton facSelect;
+    private MenuButton parkSelect;
 
     @FXML
     private Label welcomeText1;
@@ -156,14 +156,14 @@ public class test {
 
 
     faculty active = new faculty();
-    faculty Science = new faculty();
-    faculty Law = new faculty();
-    faculty Technology= new faculty();
-    faculty Engineering= new faculty();
-    faculty Medicine= new faculty();
-    faculty Nursing= new faculty();
-    faculty Sripalee= new faculty();
-    faculty UCSC= new faculty();
+    faculty Science_A = new faculty();
+    faculty Law_A = new faculty();
+    faculty Technology_A = new faculty();
+    faculty Engineering_A = new faculty();
+    faculty Medicine_A = new faculty();
+    faculty Nursing_A = new faculty();
+    faculty Sripalee_A = new faculty();
+    faculty UCSC_A = new faculty();
 
     Vehicle newVehicle= new Vehicle();
     String PType,selectedFac;
@@ -429,25 +429,25 @@ public class test {
 
     @FXML
     void onSelectScience(ActionEvent event) {
-        Science.name="Science";
-        active.noSpots=Science.noSpots=10;
-        active.noStandardSpots=Science.noStandardSpots=3;
-        active.noLongSpots=Science.noLongSpots=3;
-        active.noHandiSpots=Science.noHandiSpots=4;
-        if(Science.Spot[0].equals("ID")){
-            Science.Spot[0]= Science.name;
-            for (int j = 1; j < (Science.noStandardSpots + 1); j++) {
-                Science.Spot[j] = "standard";
+        Science_A.name="Science";
+        active.noSpots= Science_A.noSpots=10;
+        active.noStandardSpots= Science_A.noStandardSpots=3;
+        active.noLongSpots= Science_A.noLongSpots=3;
+        active.noHandiSpots= Science_A.noHandiSpots=4;
+        if(Science_A.Spot[0].equals("ID")){
+            Science_A.Spot[0]= Science_A.name;
+            for (int j = 1; j < (Science_A.noStandardSpots + 1); j++) {
+                Science_A.Spot[j] = "standard";
             }
-            for (int j = (Science.noStandardSpots + 1); j < (Science.noStandardSpots + Science.noLongSpots + 1); j++) {
-                Science.Spot[j] = "long vehicle";
+            for (int j = (Science_A.noStandardSpots + 1); j < (Science_A.noStandardSpots + Science_A.noLongSpots + 1); j++) {
+                Science_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Science.noStandardSpots + Science.noLongSpots + 1); j < (Science.noSpots + 1); j++) {
-                Science.Spot[j] = "handicapped";
+            for (int j = (Science_A.noStandardSpots + Science_A.noLongSpots + 1); j < (Science_A.noSpots + 1); j++) {
+                Science_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Science.Spot;
-        facSelect.setText(Science.name);
+        active.Spot= Science_A.Spot;
+        parkSelect.setText(Science_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
@@ -456,104 +456,104 @@ public class test {
 
     @FXML
     void onSelectTech(ActionEvent event) {
-        Technology.name="Technology";
-        active.noSpots=Technology.noSpots=10;
-        active.noStandardSpots=Technology.noStandardSpots=7;
-        active.noLongSpots=Technology.noLongSpots=2;
-        active.noHandiSpots=Technology.noHandiSpots=1;
-        if(Technology.Spot[0].equals("ID"))
+        Technology_A.name="Technology";
+        active.noSpots= Technology_A.noSpots=10;
+        active.noStandardSpots= Technology_A.noStandardSpots=7;
+        active.noLongSpots= Technology_A.noLongSpots=2;
+        active.noHandiSpots= Technology_A.noHandiSpots=1;
+        if(Technology_A.Spot[0].equals("ID"))
         {
-            Technology.Spot[0]= Technology.name;
-            for(int j=1;j<(Technology.noStandardSpots+1);j++)
+            Technology_A.Spot[0]= Technology_A.name;
+            for(int j = 1; j<(Technology_A.noStandardSpots+1); j++)
             {
-                Technology.Spot[j]="standard";
+                Technology_A.Spot[j]="standard";
             }
-            for(int j=(Technology.noStandardSpots+1);j<(Technology.noStandardSpots+ Technology.noLongSpots+1);j++)
+            for(int j = (Technology_A.noStandardSpots+1); j<(Technology_A.noStandardSpots+ Technology_A.noLongSpots+1); j++)
             {
-                Technology.Spot[j]="long vehicle";
+                Technology_A.Spot[j]="long vehicle";
             }
-            for(int j= (Technology.noStandardSpots+ Technology.noLongSpots+1);j<(Technology.noSpots+1);j++)
+            for(int j = (Technology_A.noStandardSpots+ Technology_A.noLongSpots+1); j<(Technology_A.noSpots+1); j++)
             {
-                Technology.Spot[j]="handicapped";
+                Technology_A.Spot[j]="handicapped";
             }
         }
-        active.Spot=Technology.Spot;
-        facSelect.setText(Technology.name);
+        active.Spot= Technology_A.Spot;
+        parkSelect.setText(Technology_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
     }
     @FXML
     void onSelectLaw(ActionEvent event) {
-        Law.name="Law";
-        active.noSpots=Law.noSpots=10;
-        active.noStandardSpots=Law.noStandardSpots=6;
-        active.noLongSpots=Law.noLongSpots=0;
-        active.noHandiSpots=Law.noHandiSpots=4;
-        if(Law.Spot[0].equals("ID")){
-            Law.Spot[0]= Law.name;
-            for (int j = 1; j < (Law.noStandardSpots + 1); j++) {
-                Law.Spot[j] = "standard";
+        Law_A.name="Law";
+        active.noSpots= Law_A.noSpots=10;
+        active.noStandardSpots= Law_A.noStandardSpots=6;
+        active.noLongSpots= Law_A.noLongSpots=0;
+        active.noHandiSpots= Law_A.noHandiSpots=4;
+        if(Law_A.Spot[0].equals("ID")){
+            Law_A.Spot[0]= Law_A.name;
+            for (int j = 1; j < (Law_A.noStandardSpots + 1); j++) {
+                Law_A.Spot[j] = "standard";
             }
-            for (int j = (Law.noStandardSpots + 1); j < (Law.noStandardSpots + Law.noLongSpots + 1); j++) {
-                Law.Spot[j] = "long vehicle";
+            for (int j = (Law_A.noStandardSpots + 1); j < (Law_A.noStandardSpots + Law_A.noLongSpots + 1); j++) {
+                Law_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Law.noStandardSpots + Law.noLongSpots + 1); j < (Law.noSpots + 1); j++) {
-                Law.Spot[j] = "handicapped";
+            for (int j = (Law_A.noStandardSpots + Law_A.noLongSpots + 1); j < (Law_A.noSpots + 1); j++) {
+                Law_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Law.Spot;
-        facSelect.setText(Law.name);
+        active.Spot= Law_A.Spot;
+        parkSelect.setText(Law_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
     }
     @FXML
     void onSelectEngineering(ActionEvent event) {
-        Engineering.name="Engineering";
-        active.noSpots=Engineering.noSpots=10;
-        active.noStandardSpots=Engineering.noStandardSpots=3;
-        active.noLongSpots=Engineering.noLongSpots=5;
-        active.noHandiSpots=Engineering.noHandiSpots=2;
-        if(Engineering.Spot[0].equals("ID")){
-            Engineering.Spot[0]= Engineering.name;
-            for (int j = 1; j < (Engineering.noStandardSpots + 1); j++) {
-                Engineering.Spot[j] = "standard";
+        Engineering_A.name="Engineering";
+        active.noSpots= Engineering_A.noSpots=10;
+        active.noStandardSpots= Engineering_A.noStandardSpots=3;
+        active.noLongSpots= Engineering_A.noLongSpots=5;
+        active.noHandiSpots= Engineering_A.noHandiSpots=2;
+        if(Engineering_A.Spot[0].equals("ID")){
+            Engineering_A.Spot[0]= Engineering_A.name;
+            for (int j = 1; j < (Engineering_A.noStandardSpots + 1); j++) {
+                Engineering_A.Spot[j] = "standard";
             }
-            for (int j = (Engineering.noStandardSpots + 1); j < (Engineering.noStandardSpots + Engineering.noLongSpots + 1); j++) {
-                Engineering.Spot[j] = "long vehicle";
+            for (int j = (Engineering_A.noStandardSpots + 1); j < (Engineering_A.noStandardSpots + Engineering_A.noLongSpots + 1); j++) {
+                Engineering_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Engineering.noStandardSpots + Engineering.noLongSpots + 1); j < (Engineering.noSpots + 1); j++) {
-                Engineering.Spot[j] = "handicapped";
+            for (int j = (Engineering_A.noStandardSpots + Engineering_A.noLongSpots + 1); j < (Engineering_A.noSpots + 1); j++) {
+                Engineering_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Engineering.Spot;
-        facSelect.setText(Engineering.name);
+        active.Spot= Engineering_A.Spot;
+        parkSelect.setText(Engineering_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
     }
     @FXML
     void onSelectMedicine(ActionEvent event) {
-        Medicine.name="Medicine";
-        active.noSpots=Medicine.noSpots=10;
-        active.noStandardSpots=Medicine.noStandardSpots=5;
-        active.noLongSpots=Medicine.noLongSpots=2;
-        active.noHandiSpots=Medicine.noHandiSpots=3;
-        if(Medicine.Spot[0].equals("ID")){
-            Medicine.Spot[0]= Medicine.name;
-            for (int j = 1; j < (Medicine.noStandardSpots + 1); j++) {
-                Medicine.Spot[j] = "standard";
+        Medicine_A.name="Medicine";
+        active.noSpots= Medicine_A.noSpots=10;
+        active.noStandardSpots= Medicine_A.noStandardSpots=5;
+        active.noLongSpots= Medicine_A.noLongSpots=2;
+        active.noHandiSpots= Medicine_A.noHandiSpots=3;
+        if(Medicine_A.Spot[0].equals("ID")){
+            Medicine_A.Spot[0]= Medicine_A.name;
+            for (int j = 1; j < (Medicine_A.noStandardSpots + 1); j++) {
+                Medicine_A.Spot[j] = "standard";
             }
-            for (int j = (Medicine.noStandardSpots + 1); j < (Medicine.noStandardSpots + Medicine.noLongSpots + 1); j++) {
-                Medicine.Spot[j] = "long vehicle";
+            for (int j = (Medicine_A.noStandardSpots + 1); j < (Medicine_A.noStandardSpots + Medicine_A.noLongSpots + 1); j++) {
+                Medicine_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Medicine.noStandardSpots + Medicine.noLongSpots + 1); j < (Medicine.noSpots + 1); j++) {
-                Medicine.Spot[j] = "handicapped";
+            for (int j = (Medicine_A.noStandardSpots + Medicine_A.noLongSpots + 1); j < (Medicine_A.noSpots + 1); j++) {
+                Medicine_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Medicine.Spot;
-        facSelect.setText(Medicine.name);
+        active.Spot= Medicine_A.Spot;
+        parkSelect.setText(Medicine_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
@@ -561,75 +561,75 @@ public class test {
 
     @FXML
     void onSelectUCSC(ActionEvent event) {
-        UCSC.name="UCSC";
-        active.noSpots=UCSC.noSpots=10;
-        active.noStandardSpots=UCSC.noStandardSpots=7;
-        active.noLongSpots=UCSC.noLongSpots=3;
-        active.noHandiSpots=UCSC.noHandiSpots=0;
-        if(UCSC.Spot[0].equals("ID")){
-            UCSC.Spot[0]=UCSC.name;
-            for (int j = 1; j < (UCSC.noStandardSpots + 1); j++) {
-                UCSC.Spot[j] = "standard";
+        UCSC_A.name="UCSC";
+        active.noSpots= UCSC_A.noSpots=10;
+        active.noStandardSpots= UCSC_A.noStandardSpots=7;
+        active.noLongSpots= UCSC_A.noLongSpots=3;
+        active.noHandiSpots= UCSC_A.noHandiSpots=0;
+        if(UCSC_A.Spot[0].equals("ID")){
+            UCSC_A.Spot[0]= UCSC_A.name;
+            for (int j = 1; j < (UCSC_A.noStandardSpots + 1); j++) {
+                UCSC_A.Spot[j] = "standard";
             }
-            for (int j = (UCSC.noStandardSpots + 1); j < (UCSC.noStandardSpots + UCSC.noLongSpots + 1); j++) {
-                UCSC.Spot[j] = "long vehicle";
+            for (int j = (UCSC_A.noStandardSpots + 1); j < (UCSC_A.noStandardSpots + UCSC_A.noLongSpots + 1); j++) {
+                UCSC_A.Spot[j] = "long vehicle";
             }
-            for (int j = (UCSC.noStandardSpots + UCSC.noLongSpots + 1); j < (UCSC.noSpots + 1); j++) {
-                UCSC.Spot[j] = "handicapped";
+            for (int j = (UCSC_A.noStandardSpots + UCSC_A.noLongSpots + 1); j < (UCSC_A.noSpots + 1); j++) {
+                UCSC_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=UCSC.Spot;
-        facSelect.setText(UCSC.name);
+        active.Spot= UCSC_A.Spot;
+        parkSelect.setText(UCSC_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
     }
     @FXML
     void onSelectNursing(ActionEvent event) {
-        Nursing.name="Nursing";
-        active.noSpots=Nursing.noSpots=10;
-        active.noStandardSpots=Nursing.noStandardSpots=5;
-        active.noLongSpots=Nursing.noLongSpots=1;
-        active.noHandiSpots=Nursing.noHandiSpots=4;
-        if(Nursing.Spot[0].equals("ID")){
-            Nursing.Spot[0]= Nursing.name;
-            for (int j = 1; j < (Nursing.noStandardSpots + 1); j++) {
-                Nursing.Spot[j] = "standard";
+        Nursing_A.name="Nursing";
+        active.noSpots= Nursing_A.noSpots=10;
+        active.noStandardSpots= Nursing_A.noStandardSpots=5;
+        active.noLongSpots= Nursing_A.noLongSpots=1;
+        active.noHandiSpots= Nursing_A.noHandiSpots=4;
+        if(Nursing_A.Spot[0].equals("ID")){
+            Nursing_A.Spot[0]= Nursing_A.name;
+            for (int j = 1; j < (Nursing_A.noStandardSpots + 1); j++) {
+                Nursing_A.Spot[j] = "standard";
             }
-            for (int j = (Nursing.noStandardSpots + 1); j < (Nursing.noStandardSpots + Nursing.noLongSpots + 1); j++) {
-                Nursing.Spot[j] = "long vehicle";
+            for (int j = (Nursing_A.noStandardSpots + 1); j < (Nursing_A.noStandardSpots + Nursing_A.noLongSpots + 1); j++) {
+                Nursing_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Nursing.noStandardSpots + Nursing.noLongSpots + 1); j < (Nursing.noSpots + 1); j++) {
-                Nursing.Spot[j] = "handicapped";
+            for (int j = (Nursing_A.noStandardSpots + Nursing_A.noLongSpots + 1); j < (Nursing_A.noSpots + 1); j++) {
+                Nursing_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Nursing.Spot;
-        facSelect.setText(Nursing.name);
+        active.Spot= Nursing_A.Spot;
+        parkSelect.setText(Nursing_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
     }
     @FXML
     void onSelectSripalee(ActionEvent event) {
-        Sripalee.name="Sripalee Campus";
-        active.noSpots=Sripalee.noSpots=10;
-        active.noStandardSpots=Sripalee.noStandardSpots=9;
-        active.noLongSpots=Sripalee.noLongSpots=0;
-        active.noHandiSpots=Sripalee.noHandiSpots=1;
-        if(Sripalee.Spot[0].equals("ID")){
-            Sripalee.Spot[0]= Sripalee.name;
-            for (int j = 1; j < (Sripalee.noStandardSpots + 1); j++) {
-                Sripalee.Spot[j] = "standard";
+        Sripalee_A.name="Sripalee Campus";
+        active.noSpots= Sripalee_A.noSpots=10;
+        active.noStandardSpots= Sripalee_A.noStandardSpots=9;
+        active.noLongSpots= Sripalee_A.noLongSpots=0;
+        active.noHandiSpots= Sripalee_A.noHandiSpots=1;
+        if(Sripalee_A.Spot[0].equals("ID")){
+            Sripalee_A.Spot[0]= Sripalee_A.name;
+            for (int j = 1; j < (Sripalee_A.noStandardSpots + 1); j++) {
+                Sripalee_A.Spot[j] = "standard";
             }
-            for (int j = (Sripalee.noStandardSpots + 1); j < (Sripalee.noStandardSpots + Sripalee.noLongSpots + 1); j++) {
-                Sripalee.Spot[j] = "long vehicle";
+            for (int j = (Sripalee_A.noStandardSpots + 1); j < (Sripalee_A.noStandardSpots + Sripalee_A.noLongSpots + 1); j++) {
+                Sripalee_A.Spot[j] = "long vehicle";
             }
-            for (int j = (Sripalee.noStandardSpots + Sripalee.noLongSpots + 1); j < (Sripalee.noSpots + 1); j++) {
-                Sripalee.Spot[j] = "handicapped";
+            for (int j = (Sripalee_A.noStandardSpots + Sripalee_A.noLongSpots + 1); j < (Sripalee_A.noSpots + 1); j++) {
+                Sripalee_A.Spot[j] = "handicapped";
             }
         }
-        active.Spot=Sripalee.Spot;
-        facSelect.setText(Sripalee.name);
+        active.Spot= Sripalee_A.Spot;
+        parkSelect.setText(Sripalee_A.name);
         selectedFac=active.name;
         setLPlate();
         setDisplay();
@@ -777,8 +777,8 @@ public class test {
         else{
             active.Spot[checkOut] ="handicapped";
         }
-        if (selectedFac== Science.name){
-            Science.Spot= active.Spot;
+        if (selectedFac== Science_A.name){
+            Science_A.Spot= active.Spot;
         }
         setDisplay();
         setLPlate();
