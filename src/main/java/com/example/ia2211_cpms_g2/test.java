@@ -157,12 +157,6 @@ public class test {
     private MenuButton facultySelect1;
 
     @FXML
-    private Label welcomeText1;
-
-    @FXML
-    private Label welcomeText2;
-
-    @FXML
     private MenuItem parkA;
 
     @FXML
@@ -741,7 +735,8 @@ public class test {
         Sripalee_C.SpotDimensions[8]="length = 5m , width = 3m";
         Sripalee_C.Spotbuilding[9]="Dean's Office";
         Sripalee_C.Spotbuilding[10]="Canteen";
-//selecting the correct parking area using faculty and the park name
+//selecting the active parking area using faculty and the park name
+//necessary details are set in the active park using the selected parks
         if (facultySelect.equals("Science") && parkAreaSelect.equals("A")) {
             Science_A.name = "SC_A";
             active.noSpots = Science_A.noSpots;
@@ -752,6 +747,7 @@ public class test {
             active.SpotDimensions=Science_A.SpotDimensions;
             active.Spotbuilding=Science_A.Spotbuilding;
             active.name= Science_A.name;
+            //type of each spot declared according to the no of spots of each type.repeated with all the parking areas
             if (Science_A.Spot[0].equals("ID")) {
                 Science_A.Spot[0] = Science_A.name;
                 for (int j = 1; j < (Science_A.noStandardSpots + 1); j++) {
@@ -1100,12 +1096,13 @@ public class test {
             active.Spot= Sripalee_C.Spot;
             selectedFac=active.name;
         }
+        //set the display and check out menu using active park's details
         setLPlate();
         setDisplay();
 
     }
 
-
+//faculty selection menu and its visual actions
     @FXML
     void onSelectTech(ActionEvent event) {
         facultySelect="Technology";
@@ -1189,6 +1186,7 @@ public class test {
         {
             int i = 1;
             while (i < (active.noSpots+1) ){
+                //generating parking spot ID according to available spots.first available spot of the correct type is selected
                 if (active.Spot[i].equals(PType)) {
                     if(PType.equals("standard")){
                         PSpotDisplay.setText(active.name+"_S"+(String.valueOf(i)));
@@ -1213,15 +1211,17 @@ public class test {
                     break;
                 }
                 else {
+                    //if there are no available correct type parking spots,display no space
                     PSpotDisplay.setText("No Space");
                     GPS.setText("");
                 }
                 i = i + 1;
             }
+            //update display values
         setDisplay();
     }
     }
-
+//declaring the type of the park needed
     @FXML
     void onSelectStandard(ActionEvent event) {
         PType="standard";
@@ -1237,6 +1237,8 @@ public class test {
         PType="handicapped";
         TypeSelect.setText("Handicapped");
     }
+
+    //setting up details for chick out function for each vehicle
     @FXML
     void onSelectV1(ActionEvent event) {
         checkOut=1;
@@ -1338,7 +1340,7 @@ public class test {
         PSpotDisplay1.setText("");
         TypeDisplay.setText("");
     }
-
+//park number selection for each faculty
     @FXML
     void onSelectA(ActionEvent event) {
         parkAreaSelect="A";
@@ -1356,7 +1358,7 @@ public class test {
     void onSelectC(ActionEvent event) {
         parkAreaSelect="C";
         parkSelect.setText("C");
-//clear details
+//clear details on enrtering vehicle side
     }
     @FXML
     void onClickDone(ActionEvent event) {

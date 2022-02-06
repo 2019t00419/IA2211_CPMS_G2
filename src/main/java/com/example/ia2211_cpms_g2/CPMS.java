@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CPMS extends Application {
+    //main class.starts the gui created and set the title of the window
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CPMS.class.getResource("GUI.fxml"));
