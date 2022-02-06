@@ -88,6 +88,8 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="94.40001525878907" minHeight="10.0" prefHeight="80.80003662109377" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
                   <Label text="License Plate" />
@@ -106,6 +108,12 @@
                      <MenuItem mnemonicParsing="false" onAction="#onSelectHandi" text="Handicapped" />
                   </items>
                </MenuButton>
+               <Label fx:id="GPS" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <Label text="GPS Co-ordinates" GridPane.rowIndex="5" />
+               <Label fx:id="dimensions1" text="Dimensions" visible="false" GridPane.rowIndex="6" />
+               <Label text="Nearest Building" GridPane.rowIndex="7" />
+               <Label fx:id="dimensions" text="dsfdfdfsdfsdfdsfsdf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               <Label fx:id="NBuilding" text="dsfdfdfsdfsdfdsfsdf" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             </children>
          </GridPane>
          <GridPane GridPane.columnIndex="2">
@@ -140,7 +148,7 @@
                       <MenuItem fx:id="LPlate10" mnemonicParsing="false" onAction="#onSelectV10" text="---------" />
                   </items>
                </MenuButton>
-               <Label fx:id="TypeDisplay" text="License Plate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <Label fx:id="TypeDisplay" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                <Label fx:id="PSpotDisplay1" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="184.0" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                   <font>
                      <Font size="28.0" />

@@ -4,7 +4,7 @@ public class ParkingArea {
     String name;
     int noSpots,noStandardSpots,noLongSpots,noHandiSpots;
     String[] Spot = {"ID", "", "", "", "","","","","","",""};
+    String[] SpotDimensions = {"ID", "", "", "", "","","","","","",""};
     String[] SpotGPS = {"ID", "", "", "", "","","","","","",""};
-    String[] Spotdimensions = {"ID", "", "", "", "","","","","","",""};
     String[] Spotbuilding = {"ID", "", "", "", "","","","","","",""};
 }

@@ -10,6 +10,9 @@ import javafx.scene.control.TextField;
 public class test {
 
     @FXML
+    private Label GPS;
+
+    @FXML
     private MenuItem LPlate1;
 
     @FXML
@@ -167,6 +170,18 @@ public class test {
 
     @FXML
     private MenuItem parkC;
+
+    @FXML
+    private Label NBuilding;
+
+    @FXML
+    private Label NBuilding1;
+
+    @FXML
+    private Label dimensions;
+
+    @FXML
+    private Label dimensions1;
 
     ParkingArea active = new ParkingArea();
     ParkingArea Science_A = new ParkingArea();
@@ -453,211 +468,246 @@ public class test {
         Science_A.noStandardSpots = 3;
         Science_A.noLongSpots = 3;
         Science_A.noHandiSpots = 4;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Science_A.SpotGPS[1]="6°54'06.0\"N 79°51'37.0\"E";
+        Science_A.SpotGPS[2]="6°54'06.1\"N 79°51'37.1\"E";
+        Science_A.SpotGPS[3]="6°54'06.2\"N 79°51'37.2\"E";
+        Science_A.SpotGPS[4]="6°54'06.3\"N 79°51'37.3\"E";
+        Science_A.SpotGPS[5]="6°54'06.4\"N 79°51'37.4\"E";
+        Science_A.SpotGPS[6]="6°54'06.5\"N 79°51'37.5\"E";
+        Science_A.SpotGPS[7]="6°54'06.6\"N 79°51'37.6\"E";
+        Science_A.SpotGPS[8]="6°54'06.7\"N 79°51'37.7\"E";
+        Science_A.SpotGPS[9]="6°54'06.8\"N 79°51'37.8\"E";
+        Science_A.SpotGPS[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Science_A.SpotDimensions[4]="length = 6m , width = 3m";
+        Science_A.SpotDimensions[5]="length = 5m , width = 3m";
+        Science_A.SpotDimensions[6]="length = 7m , width = 3m";
+        Science_A.Spotbuilding[7]="canteen";
+        Science_A.Spotbuilding[8]="canteen";
+        Science_A.Spotbuilding[9]="Chemistry Lab";
+        Science_A.Spotbuilding[10]="Chemistry Lab";
 
         Science_B.noSpots = 10;
         Science_B.noStandardSpots = 4;
         Science_B.noLongSpots = 2;
         Science_B.noHandiSpots = 4;
-        Science_B.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_B.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_B.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_B.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_B.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_B.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_B.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_B.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_B.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_B.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Science_B.SpotGPS[1]="6°54'07.0\"N 79°51'38.0\"E";
+        Science_B.SpotGPS[2]="6°54'07.1\"N 79°51'38.1\"E";
+        Science_B.SpotGPS[3]="6°54'07.2\"N 79°51'38.2\"E";
+        Science_B.SpotGPS[4]="6°54'07.3\"N 79°51'38.3\"E";
+        Science_B.SpotGPS[5]="6°54'07.4\"N 79°51'38.4\"E";
+        Science_B.SpotGPS[6]="6°54'07.5\"N 79°51'38.5\"E";
+        Science_B.SpotGPS[7]="6°54'07.6\"N 79°51'38.6\"E";
+        Science_B.SpotGPS[8]="6°54'07.7\"N 79°51'38.7\"E";
+        Science_B.SpotGPS[9]="6°54'07.8\"N 79°51'38.8\"E";
+        Science_B.SpotGPS[10]="6°54'07.9\"N 79°51'38.9\"E";
+        Science_B.SpotDimensions[5]="length = 5m , width = 3m";
+        Science_B.SpotDimensions[6]="length = 7m , width = 3m";
+        Science_B.Spotbuilding[7]="Dean's Office";
+        Science_B.Spotbuilding[8]="Dean's Office";
+        Science_B.Spotbuilding[9]="Chemistry Lab";
+        Science_B.Spotbuilding[10]="Chemistry Lab";
 
         Science_C.noSpots = 10;
         Science_C.noStandardSpots = 5;
         Science_C.noLongSpots = 4;
         Science_C.noHandiSpots = 1;
-        Science_C.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_C.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_C.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_C.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_C.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_C.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_C.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_C.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_C.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_C.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Science_C.SpotGPS[1]="6°54'08.0\"N 79°51'39.0\"E";
+        Science_C.SpotGPS[2]="6°54'08.1\"N 79°51'39.1\"E";
+        Science_C.SpotGPS[3]="6°54'08.2\"N 79°51'39.2\"E";
+        Science_C.SpotGPS[4]="6°54'08.3\"N 79°51'39.3\"E";
+        Science_C.SpotGPS[5]="6°54'08.4\"N 79°51'39.4\"E";
+        Science_C.SpotGPS[6]="6°54'08.5\"N 79°51'39.5\"E";
+        Science_C.SpotGPS[7]="6°54'08.6\"N 79°51'39.6\"E";
+        Science_C.SpotGPS[8]="6°54'08.7\"N 79°51'39.7\"E";
+        Science_C.SpotGPS[9]="6°54'08.8\"N 79°51'39.8\"E";
+        Science_C.SpotGPS[10]="6°54'08.9\"N 79°51'39.9\"E";
+        Science_C.SpotDimensions[6]="length = 7m , width = 3m";
+        Science_C.SpotDimensions[7]="length = 10m , width = 5m";
+        Science_C.SpotDimensions[8]="length = 5m , width = 3m";
+        Science_C.SpotDimensions[9]="length = 7m , width = 2.5m";
+
 
         Technology_A.noSpots = 10;
         Technology_A.noStandardSpots = 7;
         Technology_A.noLongSpots = 2;
         Technology_A.noHandiSpots = 1;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Technology_A.SpotGPS[1]="6°25'06.0\"N 79°11'37.0\"E";
+        Technology_A.SpotGPS[2]="6°25'06.1\"N 79°11'37.1\"E";
+        Technology_A.SpotGPS[3]="6°25'06.2\"N 79°11'37.2\"E";
+        Technology_A.SpotGPS[4]="6°25'06.3\"N 79°11'37.3\"E";
+        Technology_A.SpotGPS[5]="6°25'06.4\"N 79°11'37.4\"E";
+        Technology_A.SpotGPS[6]="6°25'06.5\"N 79°11'37.5\"E";
+        Technology_A.SpotGPS[7]="6°25'06.6\"N 79°11'37.6\"E";
+        Technology_A.SpotGPS[8]="6°25'06.7\"N 79°11'37.7\"E";
+        Technology_A.SpotGPS[9]="6°25'06.8\"N 79°11'37.8\"E";
+        Technology_A.SpotGPS[10]="6°25'06.9\"N 79°11'37.9\"E";
+        Technology_A.SpotDimensions[8]="length = 7m , width = 3m";
+        Technology_A.SpotDimensions[9]="length = 10m , width = 5m";
 
         Law_A.noSpots = 10;
         Law_A.noStandardSpots = 7;
         Law_A.noLongSpots = 0;
         Law_A.noHandiSpots = 3;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Law_A.SpotGPS[1]="6°53'06.0\"N 79°55'37.0\"E";
+        Law_A.SpotGPS[2]="6°53'06.1\"N 79°55'37.1\"E";
+        Law_A.SpotGPS[3]="6°53'06.2\"N 79°55'37.2\"E";
+        Law_A.SpotGPS[4]="6°53'06.3\"N 79°55'37.3\"E";
+        Law_A.SpotGPS[5]="6°53'06.4\"N 79°55'37.4\"E";
+        Law_A.SpotGPS[6]="6°53'06.5\"N 79°55'37.5\"E";
+        Law_A.SpotGPS[7]="6°53'06.6\"N 79°55'37.6\"E";
+        Law_A.SpotGPS[8]="6°53'06.7\"N 79°55'37.7\"E";
+        Law_A.SpotGPS[9]="6°53'06.8\"N 79°55'37.8\"E";
+        Law_A.SpotGPS[10]="6°53'06.9\"N 79°55'37.9\"E";
 
         Law_B.noSpots = 10;
         Law_B.noStandardSpots = 7;
         Law_B.noLongSpots = 2;
         Law_B.noHandiSpots = 1;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Law_B.SpotGPS[1]="6°53'00.0\"N 79°51'00.0\"E";
+        Law_B.SpotGPS[2]="6°53'00.1\"N 79°51'00.1\"E";
+        Law_B.SpotGPS[3]="6°53'00.2\"N 79°51'00.2\"E";
+        Law_B.SpotGPS[4]="6°53'00.3\"N 79°51'00.3\"E";
+        Law_B.SpotGPS[5]="6°53'00.4\"N 79°51'00.4\"E";
+        Law_B.SpotGPS[6]="6°53'00.5\"N 79°51'00.5\"E";
+        Law_B.SpotGPS[7]="6°53'00.6\"N 79°51'00.6\"E";
+        Law_B.SpotGPS[8]="6°53'00.7\"N 79°51'00.7\"E";
+        Law_B.SpotGPS[9]="6°53'00.8\"N 79°51'00.8\"E";
+        Law_B.SpotGPS[10]="6°53'00.9\"N 79°51'00.9\"E";
+        Law_B.SpotDimensions[8]="length = 5m , width = 2.5m";
+        Law_B.SpotDimensions[9]="length = 7m , width = 3m";
 
         Engineering_A.noSpots = 10;
         Engineering_A.noStandardSpots = 6;
         Engineering_A.noLongSpots = 1;
         Engineering_A.noHandiSpots = 3;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Engineering_A.SpotGPS[1]="6°04'06.10\"N 79°56'37.10\"E";
+        Engineering_A.SpotGPS[2]="6°04'06.11\"N 79°56'37.11\"E";
+        Engineering_A.SpotGPS[3]="6°04'06.12\"N 79°56'37.21\"E";
+        Engineering_A.SpotGPS[4]="6°04'06.13\"N 79°56'37.31\"E";
+        Engineering_A.SpotGPS[5]="6°04'06.14\"N 79°56'37.41\"E";
+        Engineering_A.SpotGPS[6]="6°04'06.15\"N 79°56'37.51\"E";
+        Engineering_A.SpotGPS[7]="6°04'06.16\"N 79°56'37.61\"E";
+        Engineering_A.SpotGPS[8]="6°04'06.17\"N 79°56'37.71\"E";
+        Engineering_A.SpotGPS[9]="6°04'06.18\"N 79°56'37.81\"E";
+        Engineering_A.SpotGPS[10]="6°04'06.19\"N 79°56'37.91\"E";
+        Engineering_A.SpotDimensions[7]="length = 10m , width = 5m";
 
         Medicine_A.noSpots = 10;
         Medicine_A.noStandardSpots = 5;
         Medicine_A.noLongSpots = 1;
         Medicine_A.noHandiSpots = 4;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Medicine_A.SpotGPS[1]="6°89'06.0\"N 79°51'12.0\"E";
+        Medicine_A.SpotGPS[2]="6°89'06.1\"N 79°51'12.1\"E";
+        Medicine_A.SpotGPS[3]="6°89'06.2\"N 79°51'12.2\"E";
+        Medicine_A.SpotGPS[4]="6°89'06.3\"N 79°51'12.3\"E";
+        Medicine_A.SpotGPS[5]="6°89'06.4\"N 79°51'12.4\"E";
+        Medicine_A.SpotGPS[6]="6°98'06.5\"N 79°51'12.5\"E";
+        Medicine_A.SpotGPS[7]="6°89'06.6\"N 79°51'12.6\"E";
+        Medicine_A.SpotGPS[8]="6°89'06.7\"N 79°51'12.7\"E";
+        Medicine_A.SpotGPS[9]="6°89'06.8\"N 79°51'12.8\"E";
+        Medicine_A.SpotGPS[10]="6°89'06.9\"N 79°51'12.9\"E";
+        Medicine_A.SpotDimensions[6]="length = 7m , width = 3m";
 
         Medicine_B.noSpots = 10;
         Medicine_B.noStandardSpots = 7;
         Medicine_B.noLongSpots = 1;
         Medicine_B.noHandiSpots = 2;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Medicine_B.SpotGPS[1]="6°44'06.0\"N 79°41'37.0\"E";
+        Medicine_B.SpotGPS[2]="6°44'06.1\"N 79°41'37.1\"E";
+        Medicine_B.SpotGPS[3]="6°44'06.2\"N 79°41'37.2\"E";
+        Medicine_B.SpotGPS[4]="6°44'06.3\"N 79°41'37.3\"E";
+        Medicine_B.SpotGPS[5]="6°44'06.4\"N 79°41'37.4\"E";
+        Medicine_B.SpotGPS[6]="6°44'06.5\"N 79°41'37.5\"E";
+        Medicine_B.SpotGPS[7]="6°44'06.6\"N 79°41'37.6\"E";
+        Medicine_B.SpotGPS[8]="6°44'06.7\"N 79°41'37.7\"E";
+        Medicine_B.SpotGPS[9]="6°44'06.8\"N 79°41'37.8\"E";
+        Medicine_B.SpotGPS[10]="6°44'06.9\"N 79°41'37.9\"E";
+        Medicine_B.SpotDimensions[8]="length = 5m , width = 3m";
 
         UCSC_A.noSpots = 10;
         UCSC_A.noStandardSpots = 3;
         UCSC_A.noLongSpots = 3;
         UCSC_A.noHandiSpots = 4;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        UCSC_A.SpotGPS[1]="6°15'06.0\"N 79°51'03.0\"E";
+        UCSC_A.SpotGPS[2]="6°15'06.1\"N 79°51'03.1\"E";
+        UCSC_A.SpotGPS[3]="6°15'06.2\"N 79°51'03.2\"E";
+        UCSC_A.SpotGPS[4]="6°15'06.3\"N 79°51'03.3\"E";
+        UCSC_A.SpotGPS[5]="6°15'06.4\"N 79°51'03.4\"E";
+        UCSC_A.SpotGPS[6]="6°15'06.5\"N 79°51'03.5\"E";
+        UCSC_A.SpotGPS[7]="6°15'06.6\"N 79°51'03.6\"E";
+        UCSC_A.SpotGPS[8]="6°15'06.7\"N 79°51'03.7\"E";
+        UCSC_A.SpotGPS[9]="6°15'06.8\"N 79°51'03.8\"E";
+        UCSC_A.SpotGPS[10]="6°15'06.9\"N 79°51'03.9\"E";
+        UCSC_A.SpotDimensions[4]="length = 7m , width = 3m";
+        UCSC_A.SpotDimensions[5]="length = 7m , width = 5m";
+        UCSC_A.SpotDimensions[6]="length = 5m , width = 3m";
 
         Nursing_A.noSpots = 10;
         Nursing_A.noStandardSpots = 5;
         Nursing_A.noLongSpots = 3;
         Nursing_A.noHandiSpots = 2;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Nursing_A.SpotGPS[1]="6°51'66.0\"N 79°11'37.0\"E";
+        Nursing_A.SpotGPS[2]="6°51'66.1\"N 79°11'37.1\"E";
+        Nursing_A.SpotGPS[3]="6°51'66.2\"N 79°11'37.2\"E";
+        Nursing_A.SpotGPS[4]="6°51'66.3\"N 79°11'37.3\"E";
+        Nursing_A.SpotGPS[5]="6°51'66.4\"N 79°11'37.4\"E";
+        Nursing_A.SpotGPS[6]="6°51'66.5\"N 79°11'37.5\"E";
+        Nursing_A.SpotGPS[7]="6°51'66.6\"N 79°11'37.6\"E";
+        Nursing_A.SpotGPS[8]="6°51'66.7\"N 79°11'37.7\"E";
+        Nursing_A.SpotGPS[9]="6°51'66.8\"N 79°11'37.8\"E";
+        Nursing_A.SpotGPS[10]="6°51'66.9\"N 79°11'37.9\"E";
+        Nursing_A.SpotDimensions[6]="length = 7m , width = 3m";
+        Nursing_A.SpotDimensions[7]="length = 10m , width = 5m";
+        Nursing_A.SpotDimensions[8]="length = 5m , width = 3m";
 
         Sripalee_A.noSpots = 10;
-        Sripalee_A.noStandardSpots = 9;
+        Sripalee_A.noStandardSpots = 7;
         Sripalee_A.noLongSpots = 3;
         Sripalee_A.noHandiSpots = 0;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Sripalee_A.SpotGPS[1]="6°54'46.0\"N 79°51'32.0\"E";
+        Sripalee_A.SpotGPS[2]="6°54'46.1\"N 79°51'38.1\"E";
+        Sripalee_A.SpotGPS[3]="6°54'46.2\"N 79°51'32.2\"E";
+        Sripalee_A.SpotGPS[4]="6°54'46.3\"N 79°51'34.3\"E";
+        Sripalee_A.SpotGPS[5]="6°54'46.4\"N 79°51'35.4\"E";
+        Sripalee_A.SpotGPS[6]="6°54'46.5\"N 79°51'75.5\"E";
+        Sripalee_A.SpotGPS[7]="6°54'46.6\"N 79°51'78.6\"E";
+        Sripalee_A.SpotGPS[8]="6°54'46.7\"N 79°51'97.7\"E";
+        Sripalee_A.SpotGPS[9]="6°54'46.8\"N 79°51'69.8\"E";
+        Sripalee_A.SpotGPS[10]="6°54'46.9\"N 79°51'60.9\"E";
+        Sripalee_B.SpotDimensions[8]="length = 5m , width = 3m";
+        Sripalee_B.SpotDimensions[9]="length = 7m , width = 2.5m";
+        Sripalee_B.SpotDimensions[10]="length = 7m , width = 3m";
 
         Sripalee_B.noSpots = 10;
         Sripalee_B.noStandardSpots = 7;
         Sripalee_B.noLongSpots = 0;
         Sripalee_B.noHandiSpots = 3;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Sripalee_B.SpotGPS[1]="6°54'90.0\"N 79°51'11.0\"E";
+        Sripalee_B.SpotGPS[2]="6°54'90.1\"N 79°51'11.1\"E";
+        Sripalee_B.SpotGPS[3]="6°54'90.2\"N 79°51'11.2\"E";
+        Sripalee_B.SpotGPS[4]="6°54'90.3\"N 79°51'11.3\"E";
+        Sripalee_B.SpotGPS[5]="6°54'90.4\"N 79°51'11.4\"E";
+        Sripalee_B.SpotGPS[6]="6°54'90.5\"N 79°51'11.5\"E";
+        Sripalee_B.SpotGPS[7]="6°54'90.6\"N 79°51'11.6\"E";
+        Sripalee_B.SpotGPS[8]="6°54'90.7\"N 79°51'11.7\"E";
+        Sripalee_B.SpotGPS[9]="6°54'90.8\"N 79°51'11.8\"E";
+        Sripalee_B.SpotGPS[10]="6°54'90.9\"N 79°51'11.9\"E";
 
         Sripalee_C.noSpots = 10;
         Sripalee_C.noStandardSpots = 7;
         Sripalee_C.noLongSpots = 1;
         Sripalee_C.noHandiSpots = 2;
-        Science_A.Spotdimensions[1]="6°54'06.0\"N 79°51'37.0\"E";
-        Science_A.Spotdimensions[2]="6°54'06.1\"N 79°51'37.1\"E";
-        Science_A.Spotdimensions[3]="6°54'06.2\"N 79°51'37.2\"E";
-        Science_A.Spotdimensions[4]="6°54'06.3\"N 79°51'37.3\"E";
-        Science_A.Spotdimensions[5]="6°54'06.4\"N 79°51'37.4\"E";
-        Science_A.Spotdimensions[6]="6°54'06.5\"N 79°51'37.5\"E";
-        Science_A.Spotdimensions[7]="6°54'06.6\"N 79°51'37.6\"E";
-        Science_A.Spotdimensions[8]="6°54'06.7\"N 79°51'37.7\"E";
-        Science_A.Spotdimensions[9]="6°54'06.8\"N 79°51'37.8\"E";
-        Science_A.Spotdimensions[10]="6°54'06.9\"N 79°51'37.9\"E";
+        Sripalee_C.SpotGPS[1]="6°54'96.0\"N 79°51'00.0\"E";
+        Sripalee_C.SpotGPS[2]="6°54'96.1\"N 79°51'00.1\"E";
+        Sripalee_C.SpotGPS[3]="6°54'96.2\"N 79°51'00.2\"E";
+        Sripalee_C.SpotGPS[4]="6°54'96.3\"N 79°51'00.3\"E";
+        Sripalee_C.SpotGPS[5]="6°54'96.4\"N 79°51'00.4\"E";
+        Sripalee_C.SpotGPS[6]="6°54'96.5\"N 79°51'00.5\"E";
+        Sripalee_C.SpotGPS[7]="6°54'96.6\"N 79°51'00.6\"E";
+        Sripalee_C.SpotGPS[8]="6°54'96.7\"N 79°51'00.7\"E";
+        Sripalee_C.SpotGPS[9]="6°54'96.8\"N 79°51'00.8\"E";
+        Sripalee_C.SpotGPS[10]="6°54'96.9\"N 79°51'00.9\"E";
+        Sripalee_C.SpotDimensions[8]="length = 5m , width = 3m";
 
         if (facultySelect == "Science" && parkAreaSelect == "A") {
             Science_A.name = "Science_A";
@@ -665,6 +715,8 @@ public class test {
             active.noStandardSpots = Science_A.noStandardSpots;
             active.noLongSpots = Science_A.noLongSpots;
             active.noHandiSpots = Science_A.noHandiSpots;
+            active.SpotGPS=Science_A.SpotGPS;
+            active.SpotDimensions=Science_A.SpotDimensions;
             if (Science_A.Spot[0].equals("ID")) {
                 Science_A.Spot[0] = Science_A.name;
                 for (int j = 1; j < (Science_A.noStandardSpots + 1); j++) {
@@ -688,6 +740,8 @@ public class test {
             active.noStandardSpots = Science_B.noStandardSpots;
             active.noLongSpots = Science_B.noLongSpots;
             active.noHandiSpots = Science_B.noHandiSpots;
+            active.SpotGPS=Science_B.SpotGPS;
+            active.SpotDimensions=Science_B.SpotDimensions;
             if (Science_B.Spot[0].equals("ID")) {
                 Science_B.Spot[0] = Science_B.name;
                 for (int j = 1; j < (Science_B.noStandardSpots + 1); j++) {
@@ -711,6 +765,8 @@ public class test {
             active.noStandardSpots = Science_C.noStandardSpots;
             active.noLongSpots = Science_C.noLongSpots;
             active.noHandiSpots = Science_C.noHandiSpots;
+            active.SpotGPS=Science_C.SpotGPS;
+            active.SpotDimensions=Science_C.SpotDimensions;
             if (Science_C.Spot[0].equals("ID")) {
                 Science_C.Spot[0] = Science_C.name;
                 for (int j = 1; j < (Science_C.noStandardSpots + 1); j++) {
@@ -734,6 +790,8 @@ public class test {
             active.noStandardSpots = Technology_A.noStandardSpots;
             active.noLongSpots = Technology_A.noLongSpots;
             active.noHandiSpots = Technology_A.noHandiSpots;
+            active.SpotGPS=Technology_A.SpotGPS;
+            active.SpotDimensions=Technology_A.SpotDimensions;
             if (Technology_A.Spot[0].equals("ID")) {
                 Technology_A.Spot[0] = Technology_A.name;
                 for (int j = 1; j < (Technology_A.noStandardSpots + 1); j++) {
@@ -758,6 +816,8 @@ public class test {
             active.noStandardSpots= Law_A.noStandardSpots;
             active.noLongSpots= Law_A.noLongSpots;
             active.noHandiSpots= Law_A.noHandiSpots;
+            active.SpotGPS=Law_A.SpotGPS;
+            active.SpotDimensions=Law_A.SpotDimensions;
             if(Law_A.Spot[0].equals("ID")){
                 Law_A.Spot[0]= Law_A.name;
                 for (int j = 1; j < (Law_A.noStandardSpots + 1); j++) {
@@ -781,6 +841,8 @@ public class test {
             active.noStandardSpots= Law_B.noStandardSpots;
             active.noLongSpots= Law_B.noLongSpots;
             active.noHandiSpots= Law_B.noHandiSpots;
+            active.SpotGPS=Law_B.SpotGPS;
+            active.SpotDimensions=Law_B.SpotDimensions;
             if(Law_B.Spot[0].equals("ID")){
                 Law_B.Spot[0]= Law_B.name;
                 for (int j = 1; j < (Law_B.noStandardSpots + 1); j++) {
@@ -804,6 +866,8 @@ public class test {
             active.noStandardSpots= Engineering_A.noStandardSpots;
             active.noLongSpots= Engineering_A.noLongSpots;
             active.noHandiSpots= Engineering_A.noHandiSpots;
+            active.SpotGPS=Engineering_A.SpotGPS;
+            active.SpotDimensions=Engineering_A.SpotDimensions;
             if(Engineering_A.Spot[0].equals("ID")){
                 Engineering_A.Spot[0]= Engineering_A.name;
                 for (int j = 1; j < (Engineering_A.noStandardSpots + 1); j++) {
@@ -828,6 +892,8 @@ public class test {
             active.noStandardSpots= Nursing_A.noStandardSpots;
             active.noLongSpots= Nursing_A.noLongSpots;
             active.noHandiSpots= Nursing_A.noHandiSpots;
+            active.SpotGPS=Nursing_A.SpotGPS;
+            active.SpotDimensions=Nursing_A.SpotDimensions;
             if(Nursing_A.Spot[0].equals("ID")){
                 Nursing_A.Spot[0]= Nursing_A.name;
                 for (int j = 1; j < (Nursing_A.noStandardSpots + 1); j++) {
@@ -852,6 +918,8 @@ public class test {
             active.noStandardSpots= Medicine_A.noStandardSpots;
             active.noLongSpots= Medicine_A.noLongSpots;
             active.noHandiSpots= Medicine_A.noHandiSpots;
+            active.SpotGPS=Medicine_A.SpotGPS;
+            active.SpotDimensions=Medicine_A.SpotDimensions;
             if(Medicine_A.Spot[0].equals("ID")){
                 Medicine_A.Spot[0]= Medicine_A.name;
                 for (int j = 1; j < (Medicine_A.noStandardSpots + 1); j++) {
@@ -876,6 +944,8 @@ public class test {
             active.noStandardSpots= Medicine_B.noStandardSpots;
             active.noLongSpots= Medicine_B.noLongSpots;
             active.noHandiSpots= Medicine_B.noHandiSpots;
+            active.SpotGPS=Medicine_B.SpotGPS;
+            active.SpotDimensions=Medicine_B.SpotDimensions;
             if(Medicine_B.Spot[0].equals("ID")){
                 Medicine_B.Spot[0]= Medicine_B.name;
                 for (int j = 1; j < (Medicine_B.noStandardSpots + 1); j++) {
@@ -900,6 +970,8 @@ public class test {
             active.noStandardSpots= UCSC_A.noStandardSpots;
             active.noLongSpots= UCSC_A.noLongSpots;
             active.noHandiSpots= UCSC_A.noHandiSpots;
+            active.SpotGPS=UCSC_A.SpotGPS;
+            active.SpotDimensions=UCSC_A.SpotDimensions;
             if(UCSC_A.Spot[0].equals("ID")){
                 UCSC_A.Spot[0]= UCSC_A.name;
                 for (int j = 1; j < (UCSC_A.noStandardSpots + 1); j++) {
@@ -924,6 +996,8 @@ public class test {
             active.noStandardSpots= Sripalee_A.noStandardSpots;
             active.noLongSpots= Sripalee_A.noLongSpots;
             active.noHandiSpots= Sripalee_A.noHandiSpots;
+            active.SpotGPS=Sripalee_A.SpotGPS;
+            active.SpotDimensions=Sripalee_A.SpotDimensions;
             if(Sripalee_A.Spot[0].equals("ID")){
                 Sripalee_A.Spot[0]= Sripalee_A.name;
                 for (int j = 1; j < (Sripalee_A.noStandardSpots + 1); j++) {
@@ -948,6 +1022,8 @@ public class test {
             active.noStandardSpots= Sripalee_B.noStandardSpots;
             active.noLongSpots= Sripalee_B.noLongSpots;
             active.noHandiSpots= Sripalee_B.noHandiSpots;
+            active.SpotGPS=Sripalee_B.SpotGPS;
+            active.SpotDimensions=Sripalee_B.SpotDimensions;
             if(Sripalee_B.Spot[0].equals("ID")){
                 Sripalee_B.Spot[0]= Sripalee_B.name;
                 for (int j = 1; j < (Sripalee_B.noStandardSpots + 1); j++) {
@@ -972,6 +1048,8 @@ public class test {
             active.noStandardSpots= Sripalee_C.noStandardSpots;
             active.noLongSpots= Sripalee_C.noLongSpots;
             active.noHandiSpots= Sripalee_C.noHandiSpots;
+            active.SpotGPS=Sripalee_C.SpotGPS;
+            active.SpotDimensions=Sripalee_C.SpotDimensions;
             if(Sripalee_C.Spot[0].equals("ID")){
                 Sripalee_C.Spot[0]= Sripalee_C.name;
                 for (int j = 1; j < (Sripalee_C.noStandardSpots + 1); j++) {
@@ -1079,27 +1157,33 @@ public class test {
                 if (active.Spot[i].equals(PType)) {
                     if(PType=="standard"){
                         PSpotDisplay.setText("S"+(String.valueOf(i)));
+                        dimensions1.setVisible(false);
                     }
                     if(PType=="long vehicle"){
                         PSpotDisplay.setText("L"+(String.valueOf(i- active.noStandardSpots)));
+                        dimensions.setText(active.SpotDimensions[i]);
+                        dimensions1.setVisible(true);
                     }
                     if(PType=="handicapped"){
                         PSpotDisplay.setText("H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
+                        dimensions1.setVisible(false);
                     }
                     active.Spot[i] = newVehicle.Lplate;
                     setLPlate();
+                    GPS.setText(active.SpotGPS[i]);
                     break;
-
                 }
                 else {
                     PSpotDisplay.setText("no space");
+                    GPS.setText("");
                 }
                 i = i + 1;
             }
-        }
+
         welcomeText2.setText(active.Spot[0]+" "+active.Spot[1]+" "+active.Spot[2]+" "+active.Spot[3]+" "+active.Spot[4]+" "+active.Spot[5]+" "+active.Spot[6]+" "+active.Spot[7]+" "+active.Spot[8]+" "+active.Spot[9]+" "+active.Spot[10]);
         LPlateID.setText("");
         setDisplay();
+    }
     }
 
     @FXML
