@@ -504,8 +504,8 @@ public class test {
         Science_B.SpotDimensions[6]="length = 7m , width = 3m";
         Science_B.Spotbuilding[7]="Dean's Office";
         Science_B.Spotbuilding[8]="Dean's Office";
-        Science_B.Spotbuilding[9]="Chemistry Lab";
-        Science_B.Spotbuilding[10]="Chemistry Lab";
+        Science_B.Spotbuilding[9]="Physics Lab";
+        Science_B.Spotbuilding[10]="Physics Lab";
 
         Science_C.noSpots = 10;
         Science_C.noStandardSpots = 5;
@@ -525,6 +525,7 @@ public class test {
         Science_C.SpotDimensions[7]="length = 10m , width = 5m";
         Science_C.SpotDimensions[8]="length = 5m , width = 3m";
         Science_C.SpotDimensions[9]="length = 7m , width = 2.5m";
+        Science_C.Spotbuilding[10]="Pavilion";
 
 
         Technology_A.noSpots = 10;
@@ -543,6 +544,7 @@ public class test {
         Technology_A.SpotGPS[10]="6°25'06.9\"N 79°11'37.9\"E";
         Technology_A.SpotDimensions[8]="length = 7m , width = 3m";
         Technology_A.SpotDimensions[9]="length = 10m , width = 5m";
+        Technology_A.Spotbuilding[10]="IAT Department Building";
 
         Law_A.noSpots = 10;
         Law_A.noStandardSpots = 7;
@@ -558,6 +560,9 @@ public class test {
         Law_A.SpotGPS[8]="6°53'06.7\"N 79°55'37.7\"E";
         Law_A.SpotGPS[9]="6°53'06.8\"N 79°55'37.8\"E";
         Law_A.SpotGPS[10]="6°53'06.9\"N 79°55'37.9\"E";
+        Law_A.Spotbuilding[8]="Dean's Office";
+        Law_A.Spotbuilding[9]="Indoor Stadium";
+        Law_A.Spotbuilding[10]="Canteen";
 
         Law_B.noSpots = 10;
         Law_B.noStandardSpots = 7;
@@ -575,6 +580,7 @@ public class test {
         Law_B.SpotGPS[10]="6°53'00.9\"N 79°51'00.9\"E";
         Law_B.SpotDimensions[8]="length = 5m , width = 2.5m";
         Law_B.SpotDimensions[9]="length = 7m , width = 3m";
+        Law_B.Spotbuilding[10]="Auditorium";
 
         Engineering_A.noSpots = 10;
         Engineering_A.noStandardSpots = 6;
@@ -591,6 +597,9 @@ public class test {
         Engineering_A.SpotGPS[9]="6°04'06.18\"N 79°56'37.81\"E";
         Engineering_A.SpotGPS[10]="6°04'06.19\"N 79°56'37.91\"E";
         Engineering_A.SpotDimensions[7]="length = 10m , width = 5m";
+        Engineering_A.Spotbuilding[8]="Chemistry Lab";
+        Engineering_A.Spotbuilding[9]="Physics Lab";
+        Engineering_A.Spotbuilding[10]="Administration Building";
 
         Medicine_A.noSpots = 10;
         Medicine_A.noStandardSpots = 5;
@@ -607,6 +616,10 @@ public class test {
         Medicine_A.SpotGPS[9]="6°89'06.8\"N 79°51'12.8\"E";
         Medicine_A.SpotGPS[10]="6°89'06.9\"N 79°51'12.9\"E";
         Medicine_A.SpotDimensions[6]="length = 7m , width = 3m";
+        Medicine_A.Spotbuilding[7]="Dean's Office";
+        Medicine_A.Spotbuilding[8]="Canteen";
+        Medicine_A.Spotbuilding[9]="Computer Lab";
+        Medicine_A.Spotbuilding[10]="Physics Lab";
 
         Medicine_B.noSpots = 10;
         Medicine_B.noStandardSpots = 7;
@@ -623,6 +636,8 @@ public class test {
         Medicine_B.SpotGPS[9]="6°44'06.8\"N 79°41'37.8\"E";
         Medicine_B.SpotGPS[10]="6°44'06.9\"N 79°41'37.9\"E";
         Medicine_B.SpotDimensions[8]="length = 5m , width = 3m";
+        Medicine_B.Spotbuilding[9]="Lecture Hall 1";
+        Medicine_B.Spotbuilding[10]="Lecture Hall 2";
 
         UCSC_A.noSpots = 10;
         UCSC_A.noStandardSpots = 3;
@@ -641,6 +656,10 @@ public class test {
         UCSC_A.SpotDimensions[4]="length = 7m , width = 3m";
         UCSC_A.SpotDimensions[5]="length = 7m , width = 5m";
         UCSC_A.SpotDimensions[6]="length = 5m , width = 3m";
+        UCSC_A.Spotbuilding[7]="Gym";
+        UCSC_A.Spotbuilding[8]="Canteen";
+        UCSC_A.Spotbuilding[9]="Marshal Office";
+        UCSC_A.Spotbuilding[10]="Network Lab";
 
         Nursing_A.noSpots = 10;
         Nursing_A.noStandardSpots = 5;
@@ -659,6 +678,8 @@ public class test {
         Nursing_A.SpotDimensions[6]="length = 7m , width = 3m";
         Nursing_A.SpotDimensions[7]="length = 10m , width = 5m";
         Nursing_A.SpotDimensions[8]="length = 5m , width = 3m";
+        Nursing_A.Spotbuilding[9]="Academic Building";
+        Nursing_A.Spotbuilding[10]="Canteen";
 
         Sripalee_A.noSpots = 10;
         Sripalee_A.noStandardSpots = 7;
@@ -692,6 +713,9 @@ public class test {
         Sripalee_B.SpotGPS[8]="6°54'90.7\"N 79°51'11.7\"E";
         Sripalee_B.SpotGPS[9]="6°54'90.8\"N 79°51'11.8\"E";
         Sripalee_B.SpotGPS[10]="6°54'90.9\"N 79°51'11.9\"E";
+        Sripalee_B.Spotbuilding[8]="Auditorium";
+        Sripalee_B.Spotbuilding[9]="Administration Building";
+        Sripalee_B.Spotbuilding[10]="Theatre";
 
         Sripalee_C.noSpots = 10;
         Sripalee_C.noStandardSpots = 7;
@@ -708,6 +732,8 @@ public class test {
         Sripalee_C.SpotGPS[9]="6°54'96.8\"N 79°51'00.8\"E";
         Sripalee_C.SpotGPS[10]="6°54'96.9\"N 79°51'00.9\"E";
         Sripalee_C.SpotDimensions[8]="length = 5m , width = 3m";
+        Sripalee_C.Spotbuilding[9]="Dean's Office";
+        Sripalee_C.Spotbuilding[10]="Canteen";
 
         if (facultySelect == "Science" && parkAreaSelect == "A") {
             Science_A.name = "Science_A";
@@ -717,6 +743,7 @@ public class test {
             active.noHandiSpots = Science_A.noHandiSpots;
             active.SpotGPS=Science_A.SpotGPS;
             active.SpotDimensions=Science_A.SpotDimensions;
+            active.Spotbuilding=Science_A.Spotbuilding;
             if (Science_A.Spot[0].equals("ID")) {
                 Science_A.Spot[0] = Science_A.name;
                 for (int j = 1; j < (Science_A.noStandardSpots + 1); j++) {
@@ -731,8 +758,6 @@ public class test {
             }
             active.Spot = Science_A.Spot;
             selectedFac = active.name;
-            setLPlate();
-            setDisplay();
         }
         else if (facultySelect == "Science" && parkAreaSelect == "B") {
             Science_B.name = "Science_B";
@@ -742,6 +767,7 @@ public class test {
             active.noHandiSpots = Science_B.noHandiSpots;
             active.SpotGPS=Science_B.SpotGPS;
             active.SpotDimensions=Science_B.SpotDimensions;
+            active.Spotbuilding=Science_B.Spotbuilding;
             if (Science_B.Spot[0].equals("ID")) {
                 Science_B.Spot[0] = Science_B.name;
                 for (int j = 1; j < (Science_B.noStandardSpots + 1); j++) {
@@ -756,8 +782,6 @@ public class test {
             }
             active.Spot = Science_B.Spot;
             selectedFac = active.name;
-            setLPlate();
-            setDisplay();
         }
         else if (facultySelect == "Science" && parkAreaSelect == "C") {
             Science_C.name = "Science_C";
@@ -767,6 +791,7 @@ public class test {
             active.noHandiSpots = Science_C.noHandiSpots;
             active.SpotGPS=Science_C.SpotGPS;
             active.SpotDimensions=Science_C.SpotDimensions;
+            active.Spotbuilding=Science_C.Spotbuilding;
             if (Science_C.Spot[0].equals("ID")) {
                 Science_C.Spot[0] = Science_C.name;
                 for (int j = 1; j < (Science_C.noStandardSpots + 1); j++) {
@@ -781,8 +806,6 @@ public class test {
             }
             active.Spot = Science_C.Spot;
             selectedFac = active.name;
-            setLPlate();
-            setDisplay();
         }
         else if (facultySelect == "Technology" && parkAreaSelect == "A") {
             Technology_A.name = "Technology_A";
@@ -792,6 +815,7 @@ public class test {
             active.noHandiSpots = Technology_A.noHandiSpots;
             active.SpotGPS=Technology_A.SpotGPS;
             active.SpotDimensions=Technology_A.SpotDimensions;
+            active.Spotbuilding=Technology_A.Spotbuilding;
             if (Technology_A.Spot[0].equals("ID")) {
                 Technology_A.Spot[0] = Technology_A.name;
                 for (int j = 1; j < (Technology_A.noStandardSpots + 1); j++) {
@@ -806,8 +830,6 @@ public class test {
             }
             active.Spot = Technology_A.Spot;
             selectedFac = active.name;
-            setLPlate();
-            setDisplay();
         }
 
         else if(facultySelect == "Law" && parkAreaSelect == "A") {
@@ -818,6 +840,7 @@ public class test {
             active.noHandiSpots= Law_A.noHandiSpots;
             active.SpotGPS=Law_A.SpotGPS;
             active.SpotDimensions=Law_A.SpotDimensions;
+            active.Spotbuilding=Law_A.Spotbuilding;
             if(Law_A.Spot[0].equals("ID")){
                 Law_A.Spot[0]= Law_A.name;
                 for (int j = 1; j < (Law_A.noStandardSpots + 1); j++) {
@@ -832,8 +855,6 @@ public class test {
             }
             active.Spot= Law_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect == "Law" && parkAreaSelect == "B") {
             Law_B.name="Law_B";
@@ -843,6 +864,7 @@ public class test {
             active.noHandiSpots= Law_B.noHandiSpots;
             active.SpotGPS=Law_B.SpotGPS;
             active.SpotDimensions=Law_B.SpotDimensions;
+            active.Spotbuilding=Law_B.Spotbuilding;
             if(Law_B.Spot[0].equals("ID")){
                 Law_B.Spot[0]= Law_B.name;
                 for (int j = 1; j < (Law_B.noStandardSpots + 1); j++) {
@@ -857,8 +879,6 @@ public class test {
             }
             active.Spot= Law_B.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if((facultySelect=="Engineering" && parkAreaSelect=="A")){
             Engineering_A.name="Engineering_A";
@@ -868,6 +888,7 @@ public class test {
             active.noHandiSpots= Engineering_A.noHandiSpots;
             active.SpotGPS=Engineering_A.SpotGPS;
             active.SpotDimensions=Engineering_A.SpotDimensions;
+            active.Spotbuilding=Engineering_A.Spotbuilding;
             if(Engineering_A.Spot[0].equals("ID")){
                 Engineering_A.Spot[0]= Engineering_A.name;
                 for (int j = 1; j < (Engineering_A.noStandardSpots + 1); j++) {
@@ -882,8 +903,6 @@ public class test {
             }
             active.Spot= Engineering_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Nursing" && parkAreaSelect=="A")
         {
@@ -894,6 +913,7 @@ public class test {
             active.noHandiSpots= Nursing_A.noHandiSpots;
             active.SpotGPS=Nursing_A.SpotGPS;
             active.SpotDimensions=Nursing_A.SpotDimensions;
+            active.Spotbuilding=Nursing_A.Spotbuilding;
             if(Nursing_A.Spot[0].equals("ID")){
                 Nursing_A.Spot[0]= Nursing_A.name;
                 for (int j = 1; j < (Nursing_A.noStandardSpots + 1); j++) {
@@ -908,8 +928,6 @@ public class test {
             }
             active.Spot= Nursing_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Medicine" && parkAreaSelect=="A")
         {
@@ -920,6 +938,7 @@ public class test {
             active.noHandiSpots= Medicine_A.noHandiSpots;
             active.SpotGPS=Medicine_A.SpotGPS;
             active.SpotDimensions=Medicine_A.SpotDimensions;
+            active.Spotbuilding=Medicine_A.Spotbuilding;
             if(Medicine_A.Spot[0].equals("ID")){
                 Medicine_A.Spot[0]= Medicine_A.name;
                 for (int j = 1; j < (Medicine_A.noStandardSpots + 1); j++) {
@@ -934,8 +953,6 @@ public class test {
             }
             active.Spot= Medicine_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Medicine" && parkAreaSelect=="B")
         {
@@ -946,6 +963,7 @@ public class test {
             active.noHandiSpots= Medicine_B.noHandiSpots;
             active.SpotGPS=Medicine_B.SpotGPS;
             active.SpotDimensions=Medicine_B.SpotDimensions;
+            active.Spotbuilding=Medicine_B.Spotbuilding;
             if(Medicine_B.Spot[0].equals("ID")){
                 Medicine_B.Spot[0]= Medicine_B.name;
                 for (int j = 1; j < (Medicine_B.noStandardSpots + 1); j++) {
@@ -960,8 +978,6 @@ public class test {
             }
             active.Spot= Medicine_B.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="UCSC" && parkAreaSelect=="A")
         {
@@ -972,6 +988,7 @@ public class test {
             active.noHandiSpots= UCSC_A.noHandiSpots;
             active.SpotGPS=UCSC_A.SpotGPS;
             active.SpotDimensions=UCSC_A.SpotDimensions;
+            active.Spotbuilding=UCSC_A.Spotbuilding;
             if(UCSC_A.Spot[0].equals("ID")){
                 UCSC_A.Spot[0]= UCSC_A.name;
                 for (int j = 1; j < (UCSC_A.noStandardSpots + 1); j++) {
@@ -986,8 +1003,6 @@ public class test {
             }
             active.Spot= UCSC_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Sripalee" && parkAreaSelect=="A")
         {
@@ -998,6 +1013,7 @@ public class test {
             active.noHandiSpots= Sripalee_A.noHandiSpots;
             active.SpotGPS=Sripalee_A.SpotGPS;
             active.SpotDimensions=Sripalee_A.SpotDimensions;
+            active.Spotbuilding=Sripalee_A.Spotbuilding;
             if(Sripalee_A.Spot[0].equals("ID")){
                 Sripalee_A.Spot[0]= Sripalee_A.name;
                 for (int j = 1; j < (Sripalee_A.noStandardSpots + 1); j++) {
@@ -1012,8 +1028,6 @@ public class test {
             }
             active.Spot= Sripalee_A.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Sripalee" && parkAreaSelect=="B")
         {
@@ -1024,6 +1038,7 @@ public class test {
             active.noHandiSpots= Sripalee_B.noHandiSpots;
             active.SpotGPS=Sripalee_B.SpotGPS;
             active.SpotDimensions=Sripalee_B.SpotDimensions;
+            active.Spotbuilding=Sripalee_B.Spotbuilding;
             if(Sripalee_B.Spot[0].equals("ID")){
                 Sripalee_B.Spot[0]= Sripalee_B.name;
                 for (int j = 1; j < (Sripalee_B.noStandardSpots + 1); j++) {
@@ -1038,8 +1053,6 @@ public class test {
             }
             active.Spot= Sripalee_B.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
         else if(facultySelect=="Sripalee" && parkAreaSelect=="C")
         {
@@ -1050,6 +1063,7 @@ public class test {
             active.noHandiSpots= Sripalee_C.noHandiSpots;
             active.SpotGPS=Sripalee_C.SpotGPS;
             active.SpotDimensions=Sripalee_C.SpotDimensions;
+            active.Spotbuilding=Sripalee_C.Spotbuilding;
             if(Sripalee_C.Spot[0].equals("ID")){
                 Sripalee_C.Spot[0]= Sripalee_C.name;
                 for (int j = 1; j < (Sripalee_C.noStandardSpots + 1); j++) {
@@ -1064,9 +1078,9 @@ public class test {
             }
             active.Spot= Sripalee_C.Spot;
             selectedFac=active.name;
-            setLPlate();
-            setDisplay();
         }
+        setLPlate();
+        setDisplay();
 
     }
 
@@ -1158,15 +1172,19 @@ public class test {
                     if(PType=="standard"){
                         PSpotDisplay.setText("S"+(String.valueOf(i)));
                         dimensions1.setVisible(false);
+                        NBuilding1.setVisible(false);
                     }
                     if(PType=="long vehicle"){
                         PSpotDisplay.setText("L"+(String.valueOf(i- active.noStandardSpots)));
                         dimensions.setText(active.SpotDimensions[i]);
                         dimensions1.setVisible(true);
+                        NBuilding1.setVisible(false);
                     }
                     if(PType=="handicapped"){
                         PSpotDisplay.setText("H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
                         dimensions1.setVisible(false);
+                        NBuilding1.setVisible(true);
+                        NBuilding.setText(active.Spotbuilding[i]);
                     }
                     active.Spot[i] = newVehicle.Lplate;
                     setLPlate();
@@ -1179,9 +1197,6 @@ public class test {
                 }
                 i = i + 1;
             }
-
-        welcomeText2.setText(active.Spot[0]+" "+active.Spot[1]+" "+active.Spot[2]+" "+active.Spot[3]+" "+active.Spot[4]+" "+active.Spot[5]+" "+active.Spot[6]+" "+active.Spot[7]+" "+active.Spot[8]+" "+active.Spot[9]+" "+active.Spot[10]);
-        LPlateID.setText("");
         setDisplay();
     }
     }
@@ -1321,5 +1336,13 @@ public class test {
         parkAreaSelect="C";
         parkSelect.setText("C");
 
+    }
+    @FXML
+    void onClickDone(ActionEvent event) {
+        PSpotDisplay.setText("");
+        dimensions.setText("");
+        GPS.setText("");
+        NBuilding.setText("");
+        LPlateID.setText("");
     }
 }

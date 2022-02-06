@@ -10,15 +10,19 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="657.0" prefWidth="876.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ia2211_cpms_g2.test">
+<VBox alignment="CENTER" prefHeight="684.0" prefWidth="930.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ia2211_cpms_g2.test">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label fx:id="welcomeText1" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
-    <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="29.0" prefWidth="858.0" text="UOC Car Park Management System" textAlignment="CENTER" />
-    <GridPane prefHeight="113.0" prefWidth="836.0">
+    <Label fx:id="welcomeText1" alignment="BASELINE_CENTER" prefHeight="56.0" prefWidth="688.0" text="UOC Car Park Management System" textAlignment="CENTER" textFill="#830399">
+      <font>
+         <Font size="27.0" />
+      </font></Label>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="4.0" stroke="TRANSPARENT" strokeType="INSIDE" width="866.0" />
+    <GridPane prefHeight="129.0" prefWidth="878.0">
         <columnConstraints>
             <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="599.2000305175782" minWidth="10.0" prefWidth="307.2" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.19997558593747" minWidth="10.0" prefWidth="389.59999999999997" />
@@ -30,14 +34,14 @@
         </rowConstraints>
         <children>
             <Label text="Parking Area" GridPane.rowIndex="1" />
-            <MenuButton fx:id="parkSelect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Select Parking Area" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <MenuButton fx:id="parkSelect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Select Parking Area" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <items>
                     <MenuItem fx:id="parkA" mnemonicParsing="false" onAction="#onSelectA" text="A" />
                     <MenuItem fx:id="parkB" mnemonicParsing="false" onAction="#onSelectB" text="B" />
                     <MenuItem fx:id="parkC" mnemonicParsing="false" onAction="#onSelectC" text="C" />
                 </items>
             </MenuButton>
-         <MenuButton fx:id="facultySelect1" mnemonicParsing="false" text="Select Faculty" GridPane.columnIndex="1">
+         <MenuButton fx:id="facultySelect1" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" text="Select Faculty" GridPane.columnIndex="1">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="Science" />
                <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="Technology" />
@@ -50,57 +54,66 @@
             </items>
          </MenuButton>
          <Label text="Faculty" />
-         <Button onAction="#onClickOK" prefHeight="26.0" prefWidth="138.0" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Button onAction="#onClickOK" prefHeight="26.0" prefWidth="139.0" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         </children>
     </GridPane>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="4.0" stroke="#00000006" strokeType="INSIDE" width="866.0" />
     <GridPane>
         <columnConstraints>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="442.3999755859375" minWidth="10.0" prefWidth="413.6000244140625" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="283.39996337890625" minWidth="10.0" prefWidth="59.19997558593752" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="426.4" minWidth="10.0" prefWidth="418.4" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
-            <Label prefHeight="18.0" prefWidth="98.0" text="Entering Vehicle" textAlignment="RIGHT" />
-            <Label text="ExitingVehicle" GridPane.columnIndex="1" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="28.0" stroke="#00000006" strokeType="INSIDE" width="878.0" GridPane.columnIndex="1" />
+            <Label prefHeight="30.0" prefWidth="190.0" text="Entering Vehicle" textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font></Label>
+            <Label text="Exiting Vehicle" textFill="WHITE" GridPane.columnIndex="2">
+            <font>
+               <Font size="20.0" />
+            </font></Label>
         </children>
     </GridPane>
-   <GridPane prefHeight="275.0" prefWidth="802.0">
+   <GridPane prefHeight="286.0" prefWidth="818.0">
      <columnConstraints>
-       <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="381.59996337890624" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="90.39999999999998" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="380.20001220703125" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="138.5999877929687" />
        <ColumnConstraints hgrow="SOMETIMES" maxWidth="409.0" minWidth="10.0" prefWidth="365.6" />
      </columnConstraints>
      <rowConstraints>
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <GridPane prefHeight="32.0" prefWidth="418.0">
+         <GridPane prefHeight="32.0" prefWidth="418.0" GridPane.rowIndex="1">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
            </columnConstraints>
            <rowConstraints>
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints maxHeight="94.40001525878907" minHeight="10.0" prefHeight="80.80003662109377" vgrow="SOMETIMES" />
-               <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
-               <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
+             <RowConstraints maxHeight="44.4" minHeight="10.0" prefHeight="31.200000000000003" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="69.40000762939454" minHeight="10.0" prefHeight="60.599999999999994" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="94.40001525878907" minHeight="10.0" prefHeight="55.400000000000006" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="52.40003051757813" minHeight="10.0" prefHeight="27.400000000000006" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="47.400000000000006" minHeight="10.0" prefHeight="23.5999755859375" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
                   <Label text="License Plate" />
                   <Label text="Parking Spot Type" GridPane.rowIndex="1" />
                   <TextField fx:id="LPlateID" GridPane.columnIndex="1" />
-                  <Label text="Allocated Parking Spot" GridPane.rowIndex="4" />
-                  <Label fx:id="PSpotDisplay" alignment="CENTER" prefHeight="94.0" prefWidth="191.0" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Label text="Allocated Parking Spot" GridPane.rowIndex="3" />
+                  <Label fx:id="PSpotDisplay" alignment="CENTER" prefHeight="94.0" prefWidth="191.0" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <font>
                      <Font size="40.0" />
                   </font></Label>
-                  <Button onAction="#onClickEnter" prefHeight="46.0" prefWidth="197.0" text="Check in" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button onAction="#onClickEnter" prefHeight="46.0" prefWidth="197.0" text="Check In" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <MenuButton fx:id="TypeSelect" mnemonicParsing="false" text="Type" GridPane.columnIndex="1" GridPane.rowIndex="1">
                   <items>
                      <MenuItem mnemonicParsing="false" onAction="#onSelectStandard" text="Standard" />
@@ -108,15 +121,16 @@
                      <MenuItem mnemonicParsing="false" onAction="#onSelectHandi" text="Handicapped" />
                   </items>
                </MenuButton>
-               <Label fx:id="GPS" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-               <Label text="GPS Co-ordinates" GridPane.rowIndex="5" />
-               <Label fx:id="dimensions1" text="Dimensions" visible="false" GridPane.rowIndex="6" />
-               <Label text="Nearest Building" GridPane.rowIndex="7" />
-               <Label fx:id="dimensions" text="dsfdfdfsdfsdfdsfsdf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-               <Label fx:id="NBuilding" text="dsfdfdfsdfsdfdsfsdf" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               <Label fx:id="GPS" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               <Label text="GPS Co-ordinates" GridPane.rowIndex="4" />
+               <Label fx:id="dimensions1" text="Dimensions" visible="false" GridPane.rowIndex="5" />
+               <Label fx:id="NBuilding1" text="Nearest Building" visible="false" GridPane.rowIndex="5" />
+               <Label fx:id="dimensions" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <Label fx:id="NBuilding" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <Button onAction="#onClickDone" prefHeight="46.0" prefWidth="197.0" text="Done" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             </children>
          </GridPane>
-         <GridPane GridPane.columnIndex="2">
+         <GridPane prefHeight="317.0" prefWidth="352.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -156,10 +170,12 @@
                </Label>
             </children>
          </GridPane>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="288.0" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       </children>
    </GridPane>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="4.0" stroke="TRANSPARENT" strokeType="INSIDE" width="866.0" />
     <Label text="Available Parking Spots" />
-    <GridPane prefHeight="63.0" prefWidth="830.0">
+    <GridPane prefHeight="87.0" prefWidth="896.0">
         <columnConstraints>
          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -214,4 +230,5 @@
          <Label fx:id="PSID10" GridPane.columnIndex="10" />
         </children>
     </GridPane>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="4.0" stroke="#ffffff00" strokeType="INSIDE" width="866.0" />
 </VBox>
