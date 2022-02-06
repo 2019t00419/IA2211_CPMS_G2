@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" prefHeight="657.0" prefWidth="876.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ia2211_cpms_g2.test">
     <padding>
@@ -32,6 +33,11 @@
                     <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="Science" />
                     <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="Technology" />
                     <MenuItem mnemonicParsing="false" onAction="#onSelectLaw" text="Law" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectMedicine" text="Medicine" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectUCSC" text="UCSC" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectEngineering" text="Engineering" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectNursing" text="Nursing" />
+                    <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="Sripalee Campus" />
                 </items>
             </MenuButton>
         </children>
@@ -51,9 +57,9 @@
     </GridPane>
    <GridPane prefHeight="275.0" prefWidth="802.0">
      <columnConstraints>
-       <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="415.0" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="12.0" />
-       <ColumnConstraints hgrow="SOMETIMES" maxWidth="409.0" minWidth="10.0" prefWidth="409.0" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="381.59996337890624" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="90.39999999999998" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="409.0" minWidth="10.0" prefWidth="365.6" />
      </columnConstraints>
      <rowConstraints>
        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -62,23 +68,26 @@
          <GridPane prefHeight="32.0" prefWidth="418.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
            </columnConstraints>
            <rowConstraints>
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="94.40001525878907" minHeight="10.0" prefHeight="80.80003662109377" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="39.99997558593748" minHeight="10.0" prefHeight="38.39996337890625" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
                   <Label text="License Plate" />
                   <Label text="Parking Spot Type" GridPane.rowIndex="1" />
                   <TextField fx:id="LPlateID" GridPane.columnIndex="1" />
                   <Label text="Allocated Parking Spot" GridPane.rowIndex="4" />
-                  <Label prefHeight="18.0" prefWidth="158.0" text="A" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Button onAction="#onClickEnter" prefHeight="46.0" prefWidth="166.0" text="Enter" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="PSpotDisplay" alignment="CENTER" prefHeight="94.0" prefWidth="191.0" text="A" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="40.0" />
+                  </font></Label>
+                  <Button onAction="#onClickEnter" prefHeight="46.0" prefWidth="197.0" text="Enter" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                <MenuButton fx:id="TypeSelect" mnemonicParsing="false" text="Type" GridPane.columnIndex="1" GridPane.rowIndex="1">
                   <items>
                      <MenuItem mnemonicParsing="false" onAction="#onSelectStandard" text="Standard" />
