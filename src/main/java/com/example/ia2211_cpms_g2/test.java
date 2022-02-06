@@ -92,7 +92,64 @@ public class test {
 
     @FXML
     private Label PSpotDisplay;
+    @FXML
+    private Label displayType1;
 
+    @FXML
+    private Label displayType10;
+
+    @FXML
+    private Label displayType2;
+
+    @FXML
+    private Label displayType3;
+
+    @FXML
+    private Label displayType4;
+
+    @FXML
+    private Label displayType5;
+
+    @FXML
+    private Label displayType6;
+
+    @FXML
+    private Label displayType7;
+
+    @FXML
+    private Label displayType8;
+
+    @FXML
+    private Label displayType9;
+    @FXML
+    private Label PSID1;
+
+    @FXML
+    private Label PSID10;
+
+    @FXML
+    private Label PSID2;
+
+    @FXML
+    private Label PSID3;
+
+    @FXML
+    private Label PSID4;
+
+    @FXML
+    private Label PSID5;
+
+    @FXML
+    private Label PSID6;
+
+    @FXML
+    private Label PSID7;
+
+    @FXML
+    private Label PSID8;
+
+    @FXML
+    private Label PSID9;
 
 
     faculty active = new faculty();
@@ -106,60 +163,183 @@ public class test {
     faculty UCSC= new faculty();
 
     Vehicle newVehicle= new Vehicle();
-    String PType;
+    String PType,selectedFac;
+    int checkOut;
+    public void setLPlate()
+    {
+        LPlate1.setText(active.Spot[1]);
+        LPlate2.setText(active.Spot[2]);
+        LPlate3.setText(active.Spot[3]);
+        LPlate4.setText(active.Spot[4]);
+        LPlate5.setText(active.Spot[5]);
+        LPlate6.setText(active.Spot[6]);
+        LPlate7.setText(active.Spot[7]);
+        LPlate8.setText(active.Spot[8]);
+        LPlate9.setText(active.Spot[9]);
+        LPlate10.setText(active.Spot[10]);
+    }
 
 
     public void setDisplay() {
-        if ((active.Spot[1] == "standard")||(active.Spot[1] == "long vehicle")||(active.Spot[1] == "handicapped")) {
+        if ((active.Spot[1].equals("standard"))||(active.Spot[1].equals("long vehicle"))||(active.Spot[1].equals("handicapped"))) {
             PS1.setText("Available");
+            displayType1.setText(active.Spot[1]);
         } else {
             PS1.setText(active.Spot[1]);
         }
-        if ((active.Spot[2] == "standard")||(active.Spot[2] == "long vehicle")||(active.Spot[2] == "handicapped")) {
+        if ((active.Spot[2].equals("standard"))||(active.Spot[2].equals("long vehicle"))||(active.Spot[2].equals("handicapped"))) {
             PS2.setText("Available");
+            displayType2.setText(active.Spot[2]);
         } else {
             PS2.setText(active.Spot[2]);
         }
-        if ((active.Spot[3] == "standard")||(active.Spot[3] == "long vehicle")||(active.Spot[3] == "handicapped")) {
+        if ((active.Spot[3].equals("standard"))||(active.Spot[3].equals("long vehicle"))||(active.Spot[3].equals("handicapped"))) {
             PS3.setText("Available");
+            displayType3.setText(active.Spot[3]);
         } else {
             PS3.setText(active.Spot[3]);
         }
-        if ((active.Spot[4] == "standard")||(active.Spot[4] == "long vehicle")||(active.Spot[4] == "handicapped")) {
+        if ((active.Spot[4].equals("standard"))||(active.Spot[4].equals("long vehicle"))||(active.Spot[4].equals("handicapped"))) {
             PS4.setText("Available");
+            displayType4.setText(active.Spot[4]);
         } else {
             PS4.setText(active.Spot[4]);
         }
-        if ((active.Spot[5] == "standard")||(active.Spot[5] == "long vehicle")||(active.Spot[5] == "handicapped")) {
+        if ((active.Spot[5].equals("standard"))||(active.Spot[5].equals("long vehicle"))||(active.Spot[5].equals("handicapped"))) {
             PS5.setText("Available");
+            displayType5.setText(active.Spot[5]);
         } else {
             PS5.setText(active.Spot[5]);
         }
-        if ((active.Spot[6] == "standard")||(active.Spot[6] == "long vehicle")||(active.Spot[6] == "handicapped")){
+        if ((active.Spot[6].equals("standard"))||(active.Spot[6].equals("long vehicle"))||(active.Spot[6].equals("handicapped"))){
             PS6.setText("Available");
+            displayType6.setText(active.Spot[6]);
         } else {
             PS6.setText(active.Spot[6]);
         }
-        if ((active.Spot[7] == "standard")||(active.Spot[7] == "long vehicle")||(active.Spot[7] == "handicapped")) {
+        if ((active.Spot[7].equals("standard"))||(active.Spot[7].equals("long vehicle"))||(active.Spot[7].equals("handicapped"))) {
             PS7.setText("Available");
+            displayType7.setText(active.Spot[7]);
         } else {
             PS7.setText(active.Spot[7]);
         }
-        if ((active.Spot[8] == "standard")||(active.Spot[8] == "long vehicle")||(active.Spot[8] == "handicapped")) {
+        if ((active.Spot[8].equals("standard"))||(active.Spot[8].equals("long vehicle"))||(active.Spot[8].equals("handicapped"))) {
             PS8.setText("Available");
+            displayType8.setText(active.Spot[8]);
         } else {
             PS8.setText(active.Spot[8]);
         }
-        if ((active.Spot[9] == "standard")||(active.Spot[9] == "long vehicle")||(active.Spot[9] == "handicapped")) {
+        if ((active.Spot[9].equals("standard"))||(active.Spot[9].equals("long vehicle"))||(active.Spot[9].equals("handicapped"))) {
             PS9.setText("Available");
+            displayType9.setText(active.Spot[9]);
         } else {
             PS9.setText(active.Spot[9]);
         }
-        if ((active.Spot[10] == "standard")||(active.Spot[10] == "long vehicle")||(active.Spot[10] == "handicapped")){
+        if ((active.Spot[10].equals("standard"))||(active.Spot[10].equals("long vehicle"))||(active.Spot[10].equals("handicapped"))){
             PS10.setText("Available");
+            displayType10.setText(active.Spot[10]);
         } else {
             PS10.setText(active.Spot[10]);
         }
+        for(int i=1;i<active.noSpots+1;i++) {
+            if (active.Spot[i].equals("standard")) {
+                if(i==1) {
+                    PSID1.setText("S1");
+                }
+                else if(i==2) {
+                    PSID2.setText("S2");
+                }
+                else if(i==3) {
+                    PSID3.setText("S3");
+                }
+                else if(i==4) {
+                    PSID4.setText("S4");
+                }
+                else if(i==5) {
+                    PSID5.setText("S5");
+                }
+                else if(i==6) {
+                    PSID6.setText("S6");
+                }
+                else if(i==7) {
+                    PSID7.setText("S7");
+                }
+                else if(i==8) {
+                    PSID8.setText("S8");
+                }
+                else if(i==9) {
+                    PSID9.setText("S9");
+                }
+                else if(i==10) {
+                    PSID10.setText("S10");
+                }
+            }
+            else if (active.Spot[i].equals("long vehicle")) {
+                if(i==1) {
+                    PSID1.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==2) {
+                    PSID2.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==3) {
+                    PSID3.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==4) {
+                    PSID4.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==5) {
+                    PSID5.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==6) {
+                    PSID6.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==7) {
+                    PSID7.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==8) {
+                    PSID8.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==9) {
+                    PSID9.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+                else if(i==10) {
+                    PSID10.setText("L"+String.valueOf(i-active.noStandardSpots));
+                }
+            }
+            else if (active.Spot[i].equals("handicapped")) {
+                if(i==1) {
+                    PSID1.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==2) {
+                    PSID2.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==3) {
+                    PSID3.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==4) {
+                    PSID4.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==5) {
+                    PSID5.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==6) {
+                    PSID6.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==7) {
+                    PSID7.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==8) {
+                    PSID8.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==9) {
+                    PSID9.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+                else if(i==10) {
+                    PSID10.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
+                }
+            }
+        }
+
     }
 
 
@@ -170,7 +350,7 @@ public class test {
         active.noStandardSpots=Science.noStandardSpots=3;
         active.noLongSpots=Science.noLongSpots=3;
         active.noHandiSpots=Science.noHandiSpots=4;
-        if(Science.Spot[0]=="ID"){
+        if(Science.Spot[0].equals("ID")){
             Science.Spot[0]= Science.name;
             for (int j = 1; j < (Science.noStandardSpots + 1); j++) {
                 Science.Spot[j] = "standard";
@@ -184,7 +364,7 @@ public class test {
         }
         active.Spot=Science.Spot;
         facSelect.setText(Science.name);
-
+        selectedFac=active.name;
     }
 
     @FXML
@@ -194,7 +374,7 @@ public class test {
         active.noStandardSpots=Technology.noStandardSpots=7;
         active.noLongSpots=Technology.noLongSpots=2;
         active.noHandiSpots=Technology.noHandiSpots=1;
-        if(Technology.Spot[0]=="ID")
+        if(Technology.Spot[0].equals("ID"))
         {
             Technology.Spot[0]= Technology.name;
             for(int j=1;j<(Technology.noStandardSpots+1);j++)
@@ -212,40 +392,76 @@ public class test {
         }
         active.Spot=Technology.Spot;
         facSelect.setText(Technology.name);
-
+        selectedFac=active.name;
     }
     @FXML
     void onSelectLaw(ActionEvent event) {
         Law.name="Law";
         active.noSpots=Law.noSpots=10;
-        active.noStandardSpots=Law.noStandardSpots=7;
-        active.noLongSpots=Law.noLongSpots=2;
-        active.noHandiSpots=Law.noHandiSpots=1;
-        Law.Spot[0]= Law.name;
+        active.noStandardSpots=Law.noStandardSpots=6;
+        active.noLongSpots=Law.noLongSpots=0;
+        active.noHandiSpots=Law.noHandiSpots=4;
+        if(Law.Spot[0].equals("ID")){
+            Law.Spot[0]= Law.name;
+            for (int j = 1; j < (Law.noStandardSpots + 1); j++) {
+                Law.Spot[j] = "standard";
+            }
+            for (int j = (Law.noStandardSpots + 1); j < (Law.noStandardSpots + Law.noLongSpots + 1); j++) {
+                Law.Spot[j] = "long vehicle";
+            }
+            for (int j = (Law.noStandardSpots + Law.noLongSpots + 1); j < (Law.noSpots + 1); j++) {
+                Law.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=Law.Spot;
         facSelect.setText(Law.name);
+        selectedFac=active.name;
     }
     @FXML
     void onSelectEngineering(ActionEvent event) {
         Engineering.name="Engineering";
         active.noSpots=Engineering.noSpots=10;
-        active.noStandardSpots=Engineering.noStandardSpots=7;
-        active.noLongSpots=Engineering.noLongSpots=2;
-        active.noHandiSpots=Engineering.noHandiSpots=1;
-        Engineering.Spot[0]= Engineering.name;
+        active.noStandardSpots=Engineering.noStandardSpots=3;
+        active.noLongSpots=Engineering.noLongSpots=5;
+        active.noHandiSpots=Engineering.noHandiSpots=2;
+        if(Engineering.Spot[0].equals("ID")){
+            Engineering.Spot[0]= Engineering.name;
+            for (int j = 1; j < (Engineering.noStandardSpots + 1); j++) {
+                Engineering.Spot[j] = "standard";
+            }
+            for (int j = (Engineering.noStandardSpots + 1); j < (Engineering.noStandardSpots + Engineering.noLongSpots + 1); j++) {
+                Engineering.Spot[j] = "long vehicle";
+            }
+            for (int j = (Engineering.noStandardSpots + Engineering.noLongSpots + 1); j < (Engineering.noSpots + 1); j++) {
+                Engineering.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=Engineering.Spot;
         facSelect.setText(Engineering.name);
+        selectedFac=active.name;
     }
     @FXML
     void onSelectMedicine(ActionEvent event) {
         Medicine.name="Medicine";
         active.noSpots=Medicine.noSpots=10;
-        active.noStandardSpots=Medicine.noStandardSpots=7;
+        active.noStandardSpots=Medicine.noStandardSpots=5;
         active.noLongSpots=Medicine.noLongSpots=2;
-        active.noHandiSpots=Medicine.noHandiSpots=1;
-        Medicine.Spot[0]= Medicine.name;
+        active.noHandiSpots=Medicine.noHandiSpots=3;
+        if(Medicine.Spot[0].equals("ID")){
+            Medicine.Spot[0]= Medicine.name;
+            for (int j = 1; j < (Medicine.noStandardSpots + 1); j++) {
+                Medicine.Spot[j] = "standard";
+            }
+            for (int j = (Medicine.noStandardSpots + 1); j < (Medicine.noStandardSpots + Medicine.noLongSpots + 1); j++) {
+                Medicine.Spot[j] = "long vehicle";
+            }
+            for (int j = (Medicine.noStandardSpots + Medicine.noLongSpots + 1); j < (Medicine.noSpots + 1); j++) {
+                Medicine.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=Medicine.Spot;
         facSelect.setText(Medicine.name);
+        selectedFac=active.name;
     }
 
     @FXML
@@ -253,33 +469,69 @@ public class test {
         UCSC.name="UCSC";
         active.noSpots=UCSC.noSpots=10;
         active.noStandardSpots=UCSC.noStandardSpots=7;
-        active.noLongSpots=UCSC.noLongSpots=2;
-        active.noHandiSpots=UCSC.noHandiSpots=1;
-        UCSC.Spot[0]= UCSC.name;
+        active.noLongSpots=UCSC.noLongSpots=3;
+        active.noHandiSpots=UCSC.noHandiSpots=0;
+        if(UCSC.Spot[0].equals("ID")){
+            UCSC.Spot[0]=UCSC.name;
+            for (int j = 1; j < (UCSC.noStandardSpots + 1); j++) {
+                UCSC.Spot[j] = "standard";
+            }
+            for (int j = (UCSC.noStandardSpots + 1); j < (UCSC.noStandardSpots + UCSC.noLongSpots + 1); j++) {
+                UCSC.Spot[j] = "long vehicle";
+            }
+            for (int j = (UCSC.noStandardSpots + UCSC.noLongSpots + 1); j < (UCSC.noSpots + 1); j++) {
+                UCSC.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=UCSC.Spot;
         facSelect.setText(UCSC.name);
+        selectedFac=active.name;
     }
     @FXML
     void onSelectNursing(ActionEvent event) {
         Nursing.name="Nursing";
         active.noSpots=Nursing.noSpots=10;
-        active.noStandardSpots=Nursing.noStandardSpots=7;
-        active.noLongSpots=Nursing.noLongSpots=2;
-        active.noHandiSpots=Nursing.noHandiSpots=1;
-        Nursing.Spot[0]= Nursing.name;
+        active.noStandardSpots=Nursing.noStandardSpots=5;
+        active.noLongSpots=Nursing.noLongSpots=1;
+        active.noHandiSpots=Nursing.noHandiSpots=4;
+        if(Nursing.Spot[0].equals("ID")){
+            Nursing.Spot[0]= Nursing.name;
+            for (int j = 1; j < (Nursing.noStandardSpots + 1); j++) {
+                Nursing.Spot[j] = "standard";
+            }
+            for (int j = (Nursing.noStandardSpots + 1); j < (Nursing.noStandardSpots + Nursing.noLongSpots + 1); j++) {
+                Nursing.Spot[j] = "long vehicle";
+            }
+            for (int j = (Nursing.noStandardSpots + Nursing.noLongSpots + 1); j < (Nursing.noSpots + 1); j++) {
+                Nursing.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=Nursing.Spot;
         facSelect.setText(Nursing.name);
+        selectedFac=active.name;
     }
     @FXML
     void onSelectSripalee(ActionEvent event) {
         Sripalee.name="Sripalee Campus";
         active.noSpots=Sripalee.noSpots=10;
-        active.noStandardSpots=Sripalee.noStandardSpots=7;
-        active.noLongSpots=Sripalee.noLongSpots=2;
+        active.noStandardSpots=Sripalee.noStandardSpots=9;
+        active.noLongSpots=Sripalee.noLongSpots=0;
         active.noHandiSpots=Sripalee.noHandiSpots=1;
-        Sripalee.Spot[0]= Sripalee.name;
+        if(Sripalee.Spot[0].equals("ID")){
+            Sripalee.Spot[0]= Sripalee.name;
+            for (int j = 1; j < (Sripalee.noStandardSpots + 1); j++) {
+                Sripalee.Spot[j] = "standard";
+            }
+            for (int j = (Sripalee.noStandardSpots + 1); j < (Sripalee.noStandardSpots + Sripalee.noLongSpots + 1); j++) {
+                Sripalee.Spot[j] = "long vehicle";
+            }
+            for (int j = (Sripalee.noStandardSpots + Sripalee.noLongSpots + 1); j < (Sripalee.noSpots + 1); j++) {
+                Sripalee.Spot[j] = "handicapped";
+            }
+        }
         active.Spot=Sripalee.Spot;
         facSelect.setText(Sripalee.name);
+        selectedFac=active.name;
     }
 
 
@@ -291,7 +543,7 @@ public class test {
         {
             int i = 1;
             while (i < (active.noSpots+1) ){
-                if (active.Spot[i] ==PType) {
+                if (active.Spot[i].equals(PType)) {
                     if(PType=="standard"){
                         PSpotDisplay.setText("S"+(String.valueOf(i)));
                     }
@@ -302,17 +554,9 @@ public class test {
                         PSpotDisplay.setText("H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
                     }
                     active.Spot[i] = newVehicle.Lplate;
-                    LPlate1.setText(active.Spot[1]);
-                    LPlate2.setText(active.Spot[2]);
-                    LPlate3.setText(active.Spot[3]);
-                    LPlate4.setText(active.Spot[4]);
-                    LPlate5.setText(active.Spot[5]);
-                    LPlate6.setText(active.Spot[6]);
-                    LPlate7.setText(active.Spot[7]);
-                    LPlate8.setText(active.Spot[8]);
-                    LPlate9.setText(active.Spot[9]);
-                    LPlate10.setText(active.Spot[10]);
+                    setLPlate();
                     break;
+
                 }
                 else {
                     PSpotDisplay.setText("no space");
@@ -325,6 +569,10 @@ public class test {
         setDisplay();
     }
 
+    @FXML
+    void onClickSelect(ActionEvent event) {
+        setDisplay();
+    }
     @FXML
     void onSelectStandard(ActionEvent event) {
         PType="standard";
@@ -342,52 +590,80 @@ public class test {
     }
     @FXML
     void onSelectV1(ActionEvent event) {
-
+        checkOut=1;
+        LPlateSelect.setText(active.Spot[1]);
     }
 
     @FXML
     void onSelectV10(ActionEvent event) {
-
+        checkOut=10;
+        LPlateSelect.setText(active.Spot[10]);
     }
 
     @FXML
     void onSelectV2(ActionEvent event) {
-
+        checkOut=2;
+        LPlateSelect.setText(active.Spot[2]);
     }
 
     @FXML
     void onSelectV3(ActionEvent event) {
-
+        checkOut=3;
+        LPlateSelect.setText(active.Spot[3]);
     }
 
     @FXML
     void onSelectV4(ActionEvent event) {
-
+        checkOut=4;
+        LPlateSelect.setText(active.Spot[4]);
     }
 
     @FXML
     void onSelectV5(ActionEvent event) {
-
+        checkOut=5;
+        LPlateSelect.setText(active.Spot[5]);
     }
 
     @FXML
     void onSelectV6(ActionEvent event) {
-
+        checkOut=6;
+        LPlateSelect.setText(active.Spot[6]);
     }
 
     @FXML
     void onSelectV7(ActionEvent event) {
-
+        checkOut=7;
+        LPlateSelect.setText(active.Spot[7]);
     }
 
     @FXML
     void onSelectV8(ActionEvent event) {
-
+        checkOut=8;
+        LPlateSelect.setText(active.Spot[8]);
     }
 
     @FXML
     void onSelectV9(ActionEvent event) {
+        checkOut=9;
+        LPlateSelect.setText(active.Spot[9]);
+    }
 
+    @FXML
+    void onClickCheckOut(ActionEvent event) {
+        if(checkOut<(active.noStandardSpots+1)) {
+            active.Spot[checkOut] ="standard";
+        }
+        else if(checkOut<(active.noStandardSpots+ active.noLongSpots+1))
+        {
+            active.Spot[checkOut] ="long vehicle";
+        }
+        else{
+            active.Spot[checkOut] ="handicapped";
+        }
+        if (selectedFac== Science.name){
+            Science.Spot= active.Spot;
+        }
+        setDisplay();
     }
 
 }
