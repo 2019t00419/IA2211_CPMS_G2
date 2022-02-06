@@ -18,7 +18,7 @@
     </padding>
     <Label fx:id="welcomeText1" alignment="BASELINE_CENTER" prefHeight="31.0" prefWidth="190.0" text="UOC Car Park Management System" textAlignment="CENTER" />
     <Label fx:id="welcomeText2" alignment="BASELINE_CENTER" prefHeight="29.0" prefWidth="858.0" text="UOC Car Park Management System" textAlignment="CENTER" />
-    <GridPane prefHeight="60.0" prefWidth="826.0">
+    <GridPane prefHeight="113.0" prefWidth="836.0">
         <columnConstraints>
             <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="599.2000305175782" minWidth="10.0" prefWidth="307.2" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.19997558593747" minWidth="10.0" prefWidth="389.59999999999997" />
@@ -26,22 +26,18 @@
         <rowConstraints>
          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
             <Label text="Parking Area" GridPane.rowIndex="1" />
-            <MenuButton fx:id="parkSelect" mnemonicParsing="false" text="Select Parking Area" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <MenuButton fx:id="parkSelect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Select Parking Area" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <items>
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="A" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="B" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectLaw" text="C" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectMedicine" text="D" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectUCSC" text="E" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectEngineering" text="F" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectNursing" text="G" />
-                    <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="H" />
+                    <MenuItem fx:id="parkA" mnemonicParsing="false" onAction="#onSelectA" text="A" />
+                    <MenuItem fx:id="parkB" mnemonicParsing="false" onAction="#onSelectB" text="B" />
+                    <MenuItem fx:id="parkC" mnemonicParsing="false" onAction="#onSelectC" text="C" />
                 </items>
             </MenuButton>
-         <MenuButton fx:id="parkSelect1" mnemonicParsing="false" text="Select Parking Area" GridPane.columnIndex="1">
+         <MenuButton fx:id="facultySelect1" mnemonicParsing="false" text="Select Faculty" GridPane.columnIndex="1">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#onSelectScience" text="Science" />
                <MenuItem mnemonicParsing="false" onAction="#onSelectTech" text="Technology" />
@@ -54,6 +50,7 @@
             </items>
          </MenuButton>
          <Label text="Faculty" />
+         <Button onAction="#onClickOK" prefHeight="26.0" prefWidth="138.0" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         </children>
     </GridPane>
     <GridPane>
