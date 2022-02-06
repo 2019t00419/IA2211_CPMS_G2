@@ -1191,6 +1191,7 @@ public class test {
                     if(PType.equals("standard")){
                         PSpotDisplay.setText(active.name+"_S"+(String.valueOf(i)));
                         dimensions1.setVisible(false);
+                        dimensions.setVisible(false);
                         NBuilding1.setVisible(false);
                     }
                     if(PType.equals("long vehicle")){
@@ -1202,6 +1203,7 @@ public class test {
                     if(PType.equals("handicapped")){
                         PSpotDisplay.setText(active.name+"_H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
                         dimensions1.setVisible(false);
+                        dimensions.setVisible(false);
                         NBuilding1.setVisible(true);
                         NBuilding.setText(active.Spotbuilding[i]);
                     }
@@ -1358,7 +1360,7 @@ public class test {
     void onSelectC(ActionEvent event) {
         parkAreaSelect="C";
         parkSelect.setText("C");
-//clear details on enrtering vehicle side
+//clear details on entering vehicle side
     }
     @FXML
     void onClickDone(ActionEvent event) {
