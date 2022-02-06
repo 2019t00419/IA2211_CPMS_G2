@@ -41,7 +41,6 @@
                     <MenuItem mnemonicParsing="false" onAction="#onSelectSripalee" text="Sripalee Campus" />
                 </items>
             </MenuButton>
-         <Button onAction="#onClickSelect" prefHeight="0.0" prefWidth="58.0" text="Select" GridPane.columnIndex="2" />
         </children>
     </GridPane>
     <GridPane>
@@ -85,7 +84,7 @@
                   <Label text="Parking Spot Type" GridPane.rowIndex="1" />
                   <TextField fx:id="LPlateID" GridPane.columnIndex="1" />
                   <Label text="Allocated Parking Spot" GridPane.rowIndex="4" />
-                  <Label fx:id="PSpotDisplay" alignment="CENTER" prefHeight="94.0" prefWidth="191.0" text="A" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Label fx:id="PSpotDisplay" alignment="CENTER" prefHeight="94.0" prefWidth="191.0" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                   <font>
                      <Font size="40.0" />
                   </font></Label>
@@ -102,7 +101,7 @@
          <GridPane GridPane.columnIndex="2">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
            </columnConstraints>
            <rowConstraints>
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -117,21 +116,26 @@
                   <Label text="Parking Spot" GridPane.rowIndex="2" />
                   <Label text="Type" GridPane.rowIndex="3" />
                   <Button onAction="#onClickCheckOut" prefHeight="62.0" prefWidth="171.0" text="Check out" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-               <MenuButton fx:id="LPlateSelect" mnemonicParsing="false" text="Select Vehicle" GridPane.columnIndex="1">
+               <MenuButton fx:id="LPlateSelect" mnemonicParsing="false" prefHeight="27.0" prefWidth="171.0" text="Select Vehicle" GridPane.columnIndex="1">
                   <items>
-                      <MenuItem fx:id="LPlate1" mnemonicParsing="false" onAction="#onSelectV1" text="Available" />
-                      <MenuItem fx:id="LPlate2" mnemonicParsing="false" onAction="#onSelectV2" text="Available" />
-                      <MenuItem fx:id="LPlate3" mnemonicParsing="false" onAction="#onSelectV3" text="Available" />
-                      <MenuItem fx:id="LPlate4" mnemonicParsing="false" onAction="#onSelectV4" text="Available" />
-                      <MenuItem fx:id="LPlate5" mnemonicParsing="false" onAction="#onSelectV5" text="Available" />
-                      <MenuItem fx:id="LPlate6" mnemonicParsing="false" onAction="#onSelectV6" text="Available" />
-                      <MenuItem fx:id="LPlate7" mnemonicParsing="false" onAction="#onSelectV7" text="Available" />
-                      <MenuItem fx:id="LPlate8" mnemonicParsing="false" onAction="#onSelectV8" text="Available" />
-                      <MenuItem fx:id="LPlate9" mnemonicParsing="false" onAction="#onSelectV9" text="Available" />
-                      <MenuItem fx:id="LPlate10" mnemonicParsing="false" onAction="#onSelectV10" text="Available" />
+                      <MenuItem fx:id="LPlate1" mnemonicParsing="false" onAction="#onSelectV1" text="---------" />
+                      <MenuItem fx:id="LPlate2" mnemonicParsing="false" onAction="#onSelectV2" text="---------" />
+                      <MenuItem fx:id="LPlate3" mnemonicParsing="false" onAction="#onSelectV3" text="---------" />
+                      <MenuItem fx:id="LPlate4" mnemonicParsing="false" onAction="#onSelectV4" text="---------" />
+                      <MenuItem fx:id="LPlate5" mnemonicParsing="false" onAction="#onSelectV5" text="---------" />
+                      <MenuItem fx:id="LPlate6" mnemonicParsing="false" onAction="#onSelectV6" text="---------" />
+                      <MenuItem fx:id="LPlate7" mnemonicParsing="false" onAction="#onSelectV7" text="---------" />
+                      <MenuItem fx:id="LPlate8" mnemonicParsing="false" onAction="#onSelectV8" text="---------" />
+                      <MenuItem fx:id="LPlate9" mnemonicParsing="false" onAction="#onSelectV9" text="---------" />
+                      <MenuItem fx:id="LPlate10" mnemonicParsing="false" onAction="#onSelectV10" text="---------" />
                   </items>
                </MenuButton>
-               <Label fx:id="LPlateIDisplay" text="License Plate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label fx:id="TypeDisplay" text="License Plate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <Label fx:id="PSpotDisplay1" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="184.0" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="28.0" />
+                  </font>
+               </Label>
             </children>
          </GridPane>
       </children>
@@ -157,28 +161,28 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
-            <Label fx:id="PS1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="PS2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="PS3" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Label fx:id="PS4" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Label fx:id="PS5" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Label fx:id="PS6" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Label fx:id="PS7" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Label fx:id="PS8" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <Label fx:id="PS9" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <Label fx:id="PS10" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-         <Label fx:id="displayType1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="PS1" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="PS2" text=" " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="PS3" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="PS4" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="PS5" text=" " GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label fx:id="PS6" text=" " GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label fx:id="PS7" text=" " GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Label fx:id="PS8" text=" " GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Label fx:id="PS9" text=" " GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Label fx:id="PS10" text=" " GridPane.columnIndex="10" GridPane.rowIndex="2" />
+         <Label fx:id="displayType1" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <Label text="Type" GridPane.rowIndex="1" />
          <Label text="Status" GridPane.rowIndex="2" />
-         <Label fx:id="displayType2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-         <Label fx:id="displayType3" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-         <Label fx:id="displayType4" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-         <Label fx:id="displayType5" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-         <Label fx:id="displayType6" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-         <Label fx:id="displayType7" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-         <Label fx:id="displayType8" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-         <Label fx:id="displayType9" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-         <Label fx:id="displayType10" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+         <Label fx:id="displayType2" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <Label fx:id="displayType3" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         <Label fx:id="displayType4" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         <Label fx:id="displayType5" text=" " GridPane.columnIndex="5" GridPane.rowIndex="1" />
+         <Label fx:id="displayType6" text=" " GridPane.columnIndex="6" GridPane.rowIndex="1" />
+         <Label fx:id="displayType7" text=" " GridPane.columnIndex="7" GridPane.rowIndex="1" />
+         <Label fx:id="displayType8" text=" " GridPane.columnIndex="8" GridPane.rowIndex="1" />
+         <Label fx:id="displayType9" text=" " GridPane.columnIndex="9" GridPane.rowIndex="1" />
+         <Label fx:id="displayType10" text=" " GridPane.columnIndex="10" GridPane.rowIndex="1" />
          <Label text="Parking Spot" />
          <Label fx:id="PSID1" GridPane.columnIndex="1" />
          <Label fx:id="PSID2" GridPane.columnIndex="2" />

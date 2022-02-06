@@ -43,7 +43,7 @@ public class test {
     private TextField LPlateID;
 
     @FXML
-    private Label LPlateIDisplay;
+    private Label TypeDisplay;
 
     @FXML
     private MenuButton LPlateSelect;
@@ -151,6 +151,9 @@ public class test {
     @FXML
     private Label PSID9;
 
+    @FXML
+    private Label PSpotDisplay1;
+
 
     faculty active = new faculty();
     faculty Science = new faculty();
@@ -168,16 +171,76 @@ public class test {
 
     public void setLPlate()
     {
-        LPlate1.setText(active.Spot[1]);
-        LPlate2.setText(active.Spot[2]);
-        LPlate3.setText(active.Spot[3]);
-        LPlate4.setText(active.Spot[4]);
-        LPlate5.setText(active.Spot[5]);
-        LPlate6.setText(active.Spot[6]);
-        LPlate7.setText(active.Spot[7]);
-        LPlate8.setText(active.Spot[8]);
-        LPlate9.setText(active.Spot[9]);
-        LPlate10.setText(active.Spot[10]);
+        if (active.Spot[1].equals("standard") || active.Spot[1].equals("long vehicle") || active.Spot[1].equals("handicapped"))
+        {
+            LPlate1.setText("---------");
+        }
+        else{
+            LPlate1.setText(active.Spot[1]);
+        }
+        if (active.Spot[2].equals("standard") || active.Spot[2].equals("long vehicle") || active.Spot[2].equals("handicapped"))
+        {
+            LPlate2.setText("---------");
+        }
+        else{
+            LPlate2.setText(active.Spot[2]);
+        }
+        if (active.Spot[3].equals("standard") || active.Spot[3].equals("long vehicle") || active.Spot[3].equals("handicapped"))
+        {
+            LPlate3.setText("---------");
+        }
+        else{
+            LPlate4.setText(active.Spot[3]);
+        }
+        if (active.Spot[4].equals("standard") || active.Spot[4].equals("long vehicle") || active.Spot[4].equals("handicapped"))
+        {
+            LPlate4.setText("---------");
+        }
+        else{
+            LPlate4.setText(active.Spot[4]);
+        }
+        if (active.Spot[5].equals("standard") || active.Spot[5].equals("long vehicle") || active.Spot[5].equals("handicapped"))
+        {
+            LPlate5.setText("---------");
+        }
+        else{
+            LPlate5.setText(active.Spot[5]);
+        }
+        if (active.Spot[6].equals("standard") || active.Spot[6].equals("long vehicle") || active.Spot[6].equals("handicapped"))
+        {
+            LPlate6.setText("---------");
+        }
+        else{
+            LPlate6.setText(active.Spot[6]);
+        }
+        if (active.Spot[7].equals("standard") || active.Spot[7].equals("long vehicle") || active.Spot[7].equals("handicapped"))
+        {
+            LPlate7.setText("---------");
+        }
+        else{
+            LPlate7.setText(active.Spot[7]);
+        }
+        if (active.Spot[8].equals("standard") || active.Spot[8].equals("long vehicle") || active.Spot[8].equals("handicapped"))
+        {
+            LPlate8.setText("---------");
+        }
+        else{
+            LPlate8.setText(active.Spot[8]);
+        }
+        if (active.Spot[9].equals("standard") || active.Spot[9].equals("long vehicle") || active.Spot[9].equals("handicapped"))
+        {
+            LPlate9.setText("---------");
+        }
+        else{
+            LPlate9.setText(active.Spot[9]);
+        }
+        if (active.Spot[10].equals("standard") || active.Spot[10].equals("long vehicle") || active.Spot[10].equals("handicapped"))
+        {
+            LPlate10.setText("---------");
+        }
+        else{
+            LPlate10.setText(active.Spot[10]);
+        }
     }
 
     public void setDisplay() {
@@ -608,11 +671,6 @@ public class test {
     }
 
     @FXML
-    void onClickSelect(ActionEvent event) {
-        setDisplay();
-        setLPlate();
-    }
-    @FXML
     void onSelectStandard(ActionEvent event) {
         PType="standard";
         TypeSelect.setText("Standard");
@@ -631,60 +689,80 @@ public class test {
     void onSelectV1(ActionEvent event) {
         checkOut=1;
         LPlateSelect.setText(active.Spot[1]);
+        PSpotDisplay1.setText(PSID1.getText());
+        TypeDisplay.setText(displayType1.getText());
     }
 
     @FXML
     void onSelectV10(ActionEvent event) {
         checkOut=10;
         LPlateSelect.setText(active.Spot[10]);
+        PSpotDisplay1.setText(PSID10.getText());
+        TypeDisplay.setText(displayType1.getText());
     }
 
     @FXML
     void onSelectV2(ActionEvent event) {
         checkOut=2;
         LPlateSelect.setText(active.Spot[2]);
+        PSpotDisplay1.setText(PSID2.getText());
+        TypeDisplay.setText(displayType2.getText());
     }
 
     @FXML
     void onSelectV3(ActionEvent event) {
         checkOut=3;
         LPlateSelect.setText(active.Spot[3]);
+        PSpotDisplay1.setText(PSID3.getText());
+        TypeDisplay.setText(displayType3.getText());
     }
 
     @FXML
     void onSelectV4(ActionEvent event) {
         checkOut=4;
         LPlateSelect.setText(active.Spot[4]);
+        PSpotDisplay1.setText(PSID4.getText());
+        TypeDisplay.setText(displayType4.getText());
     }
 
     @FXML
     void onSelectV5(ActionEvent event) {
         checkOut=5;
         LPlateSelect.setText(active.Spot[5]);
+        PSpotDisplay1.setText(PSID5.getText());
+        TypeDisplay.setText(displayType5.getText());
     }
 
     @FXML
     void onSelectV6(ActionEvent event) {
         checkOut=6;
         LPlateSelect.setText(active.Spot[6]);
+        PSpotDisplay1.setText(PSID6.getText());
+        TypeDisplay.setText(displayType6.getText());
     }
 
     @FXML
     void onSelectV7(ActionEvent event) {
         checkOut=7;
         LPlateSelect.setText(active.Spot[7]);
+        PSpotDisplay1.setText(PSID7.getText());
+        TypeDisplay.setText(displayType7.getText());
     }
 
     @FXML
     void onSelectV8(ActionEvent event) {
         checkOut=8;
         LPlateSelect.setText(active.Spot[8]);
+        PSpotDisplay1.setText(PSID8.getText());
+        TypeDisplay.setText(displayType8.getText());
     }
 
     @FXML
     void onSelectV9(ActionEvent event) {
         checkOut=9;
         LPlateSelect.setText(active.Spot[9]);
+        PSpotDisplay1.setText(PSID9.getText());
+        TypeDisplay.setText(displayType9.getText());
     }
 
     @FXML
@@ -703,6 +781,10 @@ public class test {
             Science.Spot= active.Spot;
         }
         setDisplay();
+        setLPlate();
+        LPlateSelect.setText("Select Vehicle");
+        PSpotDisplay1.setText("");
+        TypeDisplay.setText("");
     }
 
 }
