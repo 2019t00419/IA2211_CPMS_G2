@@ -165,6 +165,7 @@ public class test {
     Vehicle newVehicle= new Vehicle();
     String PType,selectedFac;
     int checkOut;
+
     public void setLPlate()
     {
         LPlate1.setText(active.Spot[1]);
@@ -179,165 +180,185 @@ public class test {
         LPlate10.setText(active.Spot[10]);
     }
 
-
     public void setDisplay() {
         if ((active.Spot[1].equals("standard"))||(active.Spot[1].equals("long vehicle"))||(active.Spot[1].equals("handicapped"))) {
             PS1.setText("Available");
-            displayType1.setText(active.Spot[1]);
         } else {
             PS1.setText(active.Spot[1]);
         }
         if ((active.Spot[2].equals("standard"))||(active.Spot[2].equals("long vehicle"))||(active.Spot[2].equals("handicapped"))) {
             PS2.setText("Available");
-            displayType2.setText(active.Spot[2]);
         } else {
             PS2.setText(active.Spot[2]);
         }
         if ((active.Spot[3].equals("standard"))||(active.Spot[3].equals("long vehicle"))||(active.Spot[3].equals("handicapped"))) {
             PS3.setText("Available");
-            displayType3.setText(active.Spot[3]);
         } else {
             PS3.setText(active.Spot[3]);
         }
         if ((active.Spot[4].equals("standard"))||(active.Spot[4].equals("long vehicle"))||(active.Spot[4].equals("handicapped"))) {
             PS4.setText("Available");
-            displayType4.setText(active.Spot[4]);
         } else {
             PS4.setText(active.Spot[4]);
         }
         if ((active.Spot[5].equals("standard"))||(active.Spot[5].equals("long vehicle"))||(active.Spot[5].equals("handicapped"))) {
             PS5.setText("Available");
-            displayType5.setText(active.Spot[5]);
         } else {
             PS5.setText(active.Spot[5]);
         }
         if ((active.Spot[6].equals("standard"))||(active.Spot[6].equals("long vehicle"))||(active.Spot[6].equals("handicapped"))){
             PS6.setText("Available");
-            displayType6.setText(active.Spot[6]);
         } else {
             PS6.setText(active.Spot[6]);
         }
         if ((active.Spot[7].equals("standard"))||(active.Spot[7].equals("long vehicle"))||(active.Spot[7].equals("handicapped"))) {
             PS7.setText("Available");
-            displayType7.setText(active.Spot[7]);
         } else {
             PS7.setText(active.Spot[7]);
         }
         if ((active.Spot[8].equals("standard"))||(active.Spot[8].equals("long vehicle"))||(active.Spot[8].equals("handicapped"))) {
             PS8.setText("Available");
-            displayType8.setText(active.Spot[8]);
         } else {
             PS8.setText(active.Spot[8]);
         }
         if ((active.Spot[9].equals("standard"))||(active.Spot[9].equals("long vehicle"))||(active.Spot[9].equals("handicapped"))) {
             PS9.setText("Available");
-            displayType9.setText(active.Spot[9]);
         } else {
             PS9.setText(active.Spot[9]);
         }
         if ((active.Spot[10].equals("standard"))||(active.Spot[10].equals("long vehicle"))||(active.Spot[10].equals("handicapped"))){
             PS10.setText("Available");
-            displayType10.setText(active.Spot[10]);
         } else {
             PS10.setText(active.Spot[10]);
         }
-        for(int i=1;i<active.noSpots+1;i++) {
-            if (active.Spot[i].equals("standard")) {
-                if(i==1) {
-                    PSID1.setText("S1");
-                }
-                else if(i==2) {
-                    PSID2.setText("S2");
-                }
-                else if(i==3) {
+        for(int i=1;i<active.noStandardSpots+1;i++) {
+            if (i==1){
+                PSID1.setText("S1");
+                displayType1.setText("standard");
+            }
+            if (i==2) {
+                PSID2.setText("S2");
+                displayType2.setText("standard");
+            }
+            if (i==3){
                     PSID3.setText("S3");
-                }
-                else if(i==4) {
-                    PSID4.setText("S4");
-                }
-                else if(i==5) {
-                    PSID5.setText("S5");
-                }
-                else if(i==6) {
-                    PSID6.setText("S6");
-                }
-                else if(i==7) {
-                    PSID7.setText("S7");
-                }
-                else if(i==8) {
-                    PSID8.setText("S8");
-                }
-                else if(i==9) {
-                    PSID9.setText("S9");
-                }
-                else if(i==10) {
+                    displayType3.setText("standard");
+            }
+            if (i==4) {
+                PSID4.setText("S4");
+                displayType4.setText("standard");
+            }
+            if (i==5) {
+                PSID5.setText("S5");
+                displayType5.setText("standard");
+            }
+            if (i==6) {
+                PSID6.setText("S6");
+                displayType6.setText("standard");
+            }
+            if (i==7) {
+                PSID7.setText("S7");
+                displayType7.setText("standard");
+            }
+            if (i==8) {
+                PSID8.setText("S8");
+                displayType8.setText("standard");
+            }
+            if (i==9) {
+                PSID9.setText("S9");
+                displayType9.setText("standard");
+            }
+            if (i==10){
                     PSID10.setText("S10");
-                }
+                    displayType10.setText("standard");
             }
-            else if (active.Spot[i].equals("long vehicle")) {
-                if(i==1) {
-                    PSID1.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==2) {
-                    PSID2.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==3) {
-                    PSID3.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==4) {
-                    PSID4.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==5) {
-                    PSID5.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==6) {
-                    PSID6.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==7) {
-                    PSID7.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==8) {
-                    PSID8.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==9) {
-                    PSID9.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
-                else if(i==10) {
-                    PSID10.setText("L"+String.valueOf(i-active.noStandardSpots));
-                }
+
+        }
+        for(int i=(active.noStandardSpots+1);i<active.noStandardSpots+1+active.noLongSpots;i++) {
+            if (i==1){
+                PSID1.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType1.setText("long vehicle");
             }
-            else if (active.Spot[i].equals("handicapped")) {
-                if(i==1) {
-                    PSID1.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==2) {
-                    PSID2.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==3) {
-                    PSID3.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==4) {
-                    PSID4.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==5) {
-                    PSID5.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==6) {
-                    PSID6.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==7) {
-                    PSID7.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==8) {
-                    PSID8.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==9) {
-                    PSID9.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
-                else if(i==10) {
-                    PSID10.setText("H"+String.valueOf(i-active.noStandardSpots- active.noLongSpots));
-                }
+            if (i==2) {
+                PSID2.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType2.setText("long vehicle");
             }
+            if (i==3){
+                PSID3.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType3.setText("long vehicle");
+            }
+            if (i==4) {
+                PSID4.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType4.setText("long vehicle");
+            }
+            if (i==5) {
+                PSID5.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType5.setText("long vehicle");
+            }
+            if (i==6) {
+                PSID6.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType6.setText("long vehicle");
+            }
+            if (i==7) {
+                PSID7.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType7.setText("long vehicle");
+            }
+            if (i==8) {
+                PSID8.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType8.setText("long vehicle");
+            }
+            if (i==9) {
+                PSID9.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType9.setText("long vehicle");
+            }
+            if (i==10){
+                PSID10.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                displayType10.setText("long vehicle");
+            }
+
+        }
+        for(int i=(active.noStandardSpots+1+active.noLongSpots);i<active.noSpots+1;i++) {
+            if (i==1){
+                PSID1.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType1.setText("handicapped");
+            }
+            if (i==2) {
+                PSID2.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType2.setText("handicapped");
+            }
+            if (i==3){
+                PSID3.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType3.setText("handicapped");
+            }
+            if (i==4) {
+                PSID4.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType4.setText("handicapped");
+            }
+            if (i==5) {
+                PSID5.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType5.setText("handicapped");
+            }
+            if (i==6) {
+                PSID6.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType6.setText("handicapped");
+            }
+            if (i==7) {
+                PSID7.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType7.setText("handicapped");
+            }
+            if (i==8) {
+                PSID8.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType8.setText("handicapped");
+            }
+            if (i==9) {
+                PSID9.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType9.setText("handicapped");
+            }
+            if (i==10){
+                PSID10.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                displayType10.setText("handicapped");
+            }
+
         }
 
     }
@@ -365,7 +386,10 @@ public class test {
         active.Spot=Science.Spot;
         facSelect.setText(Science.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
+
 
     @FXML
     void onSelectTech(ActionEvent event) {
@@ -393,6 +417,8 @@ public class test {
         active.Spot=Technology.Spot;
         facSelect.setText(Technology.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
     @FXML
     void onSelectLaw(ActionEvent event) {
@@ -416,6 +442,8 @@ public class test {
         active.Spot=Law.Spot;
         facSelect.setText(Law.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
     @FXML
     void onSelectEngineering(ActionEvent event) {
@@ -439,6 +467,8 @@ public class test {
         active.Spot=Engineering.Spot;
         facSelect.setText(Engineering.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
     @FXML
     void onSelectMedicine(ActionEvent event) {
@@ -462,6 +492,8 @@ public class test {
         active.Spot=Medicine.Spot;
         facSelect.setText(Medicine.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
 
     @FXML
@@ -486,6 +518,8 @@ public class test {
         active.Spot=UCSC.Spot;
         facSelect.setText(UCSC.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
     @FXML
     void onSelectNursing(ActionEvent event) {
@@ -509,6 +543,8 @@ public class test {
         active.Spot=Nursing.Spot;
         facSelect.setText(Nursing.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
     @FXML
     void onSelectSripalee(ActionEvent event) {
@@ -532,6 +568,8 @@ public class test {
         active.Spot=Sripalee.Spot;
         facSelect.setText(Sripalee.name);
         selectedFac=active.name;
+        setLPlate();
+        setDisplay();
     }
 
 
@@ -572,6 +610,7 @@ public class test {
     @FXML
     void onClickSelect(ActionEvent event) {
         setDisplay();
+        setLPlate();
     }
     @FXML
     void onSelectStandard(ActionEvent event) {
