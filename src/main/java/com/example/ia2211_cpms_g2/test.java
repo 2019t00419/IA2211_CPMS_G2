@@ -735,7 +735,7 @@ public class test {
         Sripalee_C.Spotbuilding[9]="Dean's Office";
         Sripalee_C.Spotbuilding[10]="Canteen";
 
-        if (facultySelect == "Science" && parkAreaSelect == "A") {
+        if (facultySelect.equals("Science") && parkAreaSelect.equals("A")) {
             Science_A.name = "Science_A";
             active.noSpots = Science_A.noSpots;
             active.noStandardSpots = Science_A.noStandardSpots;
@@ -759,7 +759,7 @@ public class test {
             active.Spot = Science_A.Spot;
             selectedFac = active.name;
         }
-        else if (facultySelect == "Science" && parkAreaSelect == "B") {
+        else if (facultySelect.equals("Science") && parkAreaSelect.equals("B")) {
             Science_B.name = "Science_B";
             active.noSpots = Science_B.noSpots;
             active.noStandardSpots = Science_B.noStandardSpots;
@@ -783,7 +783,7 @@ public class test {
             active.Spot = Science_B.Spot;
             selectedFac = active.name;
         }
-        else if (facultySelect == "Science" && parkAreaSelect == "C") {
+        else if (facultySelect.equals("Science") && parkAreaSelect.equals("C")) {
             Science_C.name = "Science_C";
             active.noSpots = Science_C.noSpots;
             active.noStandardSpots = Science_C.noStandardSpots;
@@ -807,7 +807,7 @@ public class test {
             active.Spot = Science_C.Spot;
             selectedFac = active.name;
         }
-        else if (facultySelect == "Technology" && parkAreaSelect == "A") {
+        else if (facultySelect.equals("Technology") && parkAreaSelect.equals("A")) {
             Technology_A.name = "Technology_A";
             active.noSpots = Technology_A.noSpots;
             active.noStandardSpots = Technology_A.noStandardSpots;
@@ -832,7 +832,7 @@ public class test {
             selectedFac = active.name;
         }
 
-        else if(facultySelect == "Law" && parkAreaSelect == "A") {
+        else if(facultySelect.equals("Law") && parkAreaSelect.equals("A")) {
             Law_A.name="Law_A";
             active.noSpots= Law_A.noSpots;
             active.noStandardSpots= Law_A.noStandardSpots;
@@ -856,7 +856,7 @@ public class test {
             active.Spot= Law_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect == "Law" && parkAreaSelect == "B") {
+        else if(facultySelect.equals("Law") && parkAreaSelect.equals("B")) {
             Law_B.name="Law_B";
             active.noSpots= Law_B.noSpots;
             active.noStandardSpots= Law_B.noStandardSpots;
@@ -880,7 +880,7 @@ public class test {
             active.Spot= Law_B.Spot;
             selectedFac=active.name;
         }
-        else if((facultySelect=="Engineering" && parkAreaSelect=="A")){
+        else if((facultySelect.equals("Engineering") && parkAreaSelect.equals("A"))){
             Engineering_A.name="Engineering_A";
             active.noSpots= Engineering_A.noSpots;
             active.noStandardSpots= Engineering_A.noStandardSpots;
@@ -904,7 +904,7 @@ public class test {
             active.Spot= Engineering_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Nursing" && parkAreaSelect=="A")
+        else if(facultySelect.equals("Nursing") && parkAreaSelect.equals("A"))
         {
             Nursing_A.name="Nursing_A";
             active.noSpots= Nursing_A.noSpots;
@@ -929,7 +929,7 @@ public class test {
             active.Spot= Nursing_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Medicine" && parkAreaSelect=="A")
+        else if(facultySelect.equals("Medicine") && parkAreaSelect.equals("A"))
         {
             Medicine_A.name="Medicine_A";
             active.noSpots= Medicine_A.noSpots;
@@ -954,7 +954,7 @@ public class test {
             active.Spot= Medicine_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Medicine" && parkAreaSelect=="B")
+        else if(facultySelect.equals("Medicine") && parkAreaSelect.equals("B"))
         {
             Medicine_B.name="Medicine_B";
             active.noSpots= Medicine_B.noSpots;
@@ -979,7 +979,7 @@ public class test {
             active.Spot= Medicine_B.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="UCSC" && parkAreaSelect=="A")
+        else if(facultySelect.equals("UCSC") && parkAreaSelect.equals("A"))
         {
             UCSC_A.name="UCSC";
             active.noSpots= UCSC_A.noSpots;
@@ -1004,7 +1004,7 @@ public class test {
             active.Spot= UCSC_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Sripalee" && parkAreaSelect=="A")
+        else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("A"))
         {
             Sripalee_A.name="Sripalee Campus";
             active.noSpots= Sripalee_A.noSpots;
@@ -1029,7 +1029,7 @@ public class test {
             active.Spot= Sripalee_A.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Sripalee" && parkAreaSelect=="B")
+        else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("B"))
         {
             Sripalee_B.name="Sripalee Campus";
             active.noSpots= Sripalee_B.noSpots;
@@ -1054,7 +1054,7 @@ public class test {
             active.Spot= Sripalee_B.Spot;
             selectedFac=active.name;
         }
-        else if(facultySelect=="Sripalee" && parkAreaSelect=="C")
+        else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("C"))
         {
             Sripalee_C.name="Sripalee Campus";
             active.noSpots= Sripalee_C.noSpots;
@@ -1169,18 +1169,18 @@ public class test {
             int i = 1;
             while (i < (active.noSpots+1) ){
                 if (active.Spot[i].equals(PType)) {
-                    if(PType=="standard"){
+                    if(PType.equals("standard")){
                         PSpotDisplay.setText("S"+(String.valueOf(i)));
                         dimensions1.setVisible(false);
                         NBuilding1.setVisible(false);
                     }
-                    if(PType=="long vehicle"){
+                    if(PType.equals("long vehicle")){
                         PSpotDisplay.setText("L"+(String.valueOf(i- active.noStandardSpots)));
                         dimensions.setText(active.SpotDimensions[i]);
                         dimensions1.setVisible(true);
                         NBuilding1.setVisible(false);
                     }
-                    if(PType=="handicapped"){
+                    if(PType.equals("handicapped")){
                         PSpotDisplay.setText("H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
                         dimensions1.setVisible(false);
                         NBuilding1.setVisible(true);
