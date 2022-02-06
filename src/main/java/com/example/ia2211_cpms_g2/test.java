@@ -182,7 +182,7 @@ public class test {
 
     @FXML
     private Label dimensions1;
-
+//creating new objects for each parking area
     ParkingArea active = new ParkingArea();
     ParkingArea Science_A = new ParkingArea();
     ParkingArea Science_B = new ParkingArea();
@@ -203,9 +203,11 @@ public class test {
     String PType,selectedFac;
     int checkOut;
     String facultySelect,parkAreaSelect;
-
+//setting the data for th check out dropdown menu
     public void setLPlate()
     {
+        //setting available spots of the active car park to null represented by dotted lines
+        //while occupied places get the relevant Licence plate number
         if (active.Spot[1].equals("standard") || active.Spot[1].equals("long vehicle") || active.Spot[1].equals("handicapped"))
         {
             LPlate1.setText("---------");
@@ -225,7 +227,7 @@ public class test {
             LPlate3.setText("---------");
         }
         else{
-            LPlate4.setText(active.Spot[3]);
+            LPlate3.setText(active.Spot[3]);
         }
         if (active.Spot[4].equals("standard") || active.Spot[4].equals("long vehicle") || active.Spot[4].equals("handicapped"))
         {
@@ -279,6 +281,8 @@ public class test {
     }
 
     public void setDisplay() {
+        //marking available spots in the selected car park
+        //otherwise marking the number of the vehicle on the place
         if ((active.Spot[1].equals("standard"))||(active.Spot[1].equals("long vehicle"))||(active.Spot[1].equals("handicapped"))) {
             PS1.setText("Available");
         } else {
@@ -329,131 +333,134 @@ public class test {
         } else {
             PS10.setText(active.Spot[10]);
         }
+        //declaring the ID of the parking spots of standard parking spots
         for(int i=1;i<active.noStandardSpots+1;i++) {
             if (i==1){
-                PSID1.setText("S1");
+                PSID1.setText(active.name+"_S1");
                 displayType1.setText("standard");
             }
             if (i==2) {
-                PSID2.setText("S2");
+                PSID2.setText(active.name+"_S2");
                 displayType2.setText("standard");
             }
             if (i==3){
-                    PSID3.setText("S3");
+                    PSID3.setText(active.name+"_S3");
                     displayType3.setText("standard");
             }
             if (i==4) {
-                PSID4.setText("S4");
+                PSID4.setText(active.name+"_S4");
                 displayType4.setText("standard");
             }
             if (i==5) {
-                PSID5.setText("S5");
+                PSID5.setText(active.name+"_S5");
                 displayType5.setText("standard");
             }
             if (i==6) {
-                PSID6.setText("S6");
+                PSID6.setText(active.name+"_S6");
                 displayType6.setText("standard");
             }
             if (i==7) {
-                PSID7.setText("S7");
+                PSID7.setText(active.name+"_S7");
                 displayType7.setText("standard");
             }
             if (i==8) {
-                PSID8.setText("S8");
+                PSID8.setText(active.name+"_S8");
                 displayType8.setText("standard");
             }
             if (i==9) {
-                PSID9.setText("S9");
+                PSID9.setText(active.name+"_S9");
                 displayType9.setText("standard");
             }
             if (i==10){
-                    PSID10.setText("S10");
+                    PSID10.setText(active.name+"_S10");
                     displayType10.setText("standard");
             }
 
         }
+        //declaring the ID of the parking spots of long vehicle parking spots
         for(int i=(active.noStandardSpots+1);i<active.noStandardSpots+1+active.noLongSpots;i++) {
             if (i==1){
-                PSID1.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID1.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType1.setText("long vehicle");
             }
             if (i==2) {
-                PSID2.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID2.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType2.setText("long vehicle");
             }
             if (i==3){
-                PSID3.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID3.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType3.setText("long vehicle");
             }
             if (i==4) {
-                PSID4.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID4.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType4.setText("long vehicle");
             }
             if (i==5) {
-                PSID5.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID5.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType5.setText("long vehicle");
             }
             if (i==6) {
-                PSID6.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID6.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType6.setText("long vehicle");
             }
             if (i==7) {
-                PSID7.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID7.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType7.setText("long vehicle");
             }
             if (i==8) {
-                PSID8.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID8.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType8.setText("long vehicle");
             }
             if (i==9) {
-                PSID9.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID9.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType9.setText("long vehicle");
             }
             if (i==10){
-                PSID10.setText("L"+(String.valueOf(i-active.noStandardSpots)));
+                PSID10.setText(active.name+"_L"+(String.valueOf(i-active.noStandardSpots)));
                 displayType10.setText("long vehicle");
             }
 
         }
+        //declaring the ID of the parking spots of handicapped parking spots
         for(int i=(active.noStandardSpots+1+active.noLongSpots);i<active.noSpots+1;i++) {
             if (i==1){
-                PSID1.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID1.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType1.setText("handicapped");
             }
             if (i==2) {
-                PSID2.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID2.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType2.setText("handicapped");
             }
             if (i==3){
-                PSID3.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID3.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType3.setText("handicapped");
             }
             if (i==4) {
-                PSID4.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID4.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType4.setText("handicapped");
             }
             if (i==5) {
-                PSID5.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID5.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType5.setText("handicapped");
             }
             if (i==6) {
-                PSID6.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID6.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType6.setText("handicapped");
             }
             if (i==7) {
-                PSID7.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID7.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType7.setText("handicapped");
             }
             if (i==8) {
-                PSID8.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID8.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType8.setText("handicapped");
             }
             if (i==9) {
-                PSID9.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID9.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType9.setText("handicapped");
             }
             if (i==10){
-                PSID10.setText("H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
+                PSID10.setText(active.name+"_H"+(String.valueOf(i-active.noStandardSpots- active.noLongSpots)));
                 displayType10.setText("handicapped");
             }
 
@@ -461,7 +468,7 @@ public class test {
 
     }
 
-
+//assigning values to each entity(number of parking spots,long vehicle,standard,handicapped spots.gps coordinates and other details
     @FXML
     void onClickOK(ActionEvent event) {
         Science_A.noSpots = 10;
@@ -734,9 +741,9 @@ public class test {
         Sripalee_C.SpotDimensions[8]="length = 5m , width = 3m";
         Sripalee_C.Spotbuilding[9]="Dean's Office";
         Sripalee_C.Spotbuilding[10]="Canteen";
-
+//selecting the correct parking area using faculty and the park name
         if (facultySelect.equals("Science") && parkAreaSelect.equals("A")) {
-            Science_A.name = "Science_A";
+            Science_A.name = "SC_A";
             active.noSpots = Science_A.noSpots;
             active.noStandardSpots = Science_A.noStandardSpots;
             active.noLongSpots = Science_A.noLongSpots;
@@ -744,6 +751,7 @@ public class test {
             active.SpotGPS=Science_A.SpotGPS;
             active.SpotDimensions=Science_A.SpotDimensions;
             active.Spotbuilding=Science_A.Spotbuilding;
+            active.name= Science_A.name;
             if (Science_A.Spot[0].equals("ID")) {
                 Science_A.Spot[0] = Science_A.name;
                 for (int j = 1; j < (Science_A.noStandardSpots + 1); j++) {
@@ -760,7 +768,7 @@ public class test {
             selectedFac = active.name;
         }
         else if (facultySelect.equals("Science") && parkAreaSelect.equals("B")) {
-            Science_B.name = "Science_B";
+            Science_B.name = "SC_B";
             active.noSpots = Science_B.noSpots;
             active.noStandardSpots = Science_B.noStandardSpots;
             active.noLongSpots = Science_B.noLongSpots;
@@ -768,6 +776,7 @@ public class test {
             active.SpotGPS=Science_B.SpotGPS;
             active.SpotDimensions=Science_B.SpotDimensions;
             active.Spotbuilding=Science_B.Spotbuilding;
+            active.name= Science_B.name;
             if (Science_B.Spot[0].equals("ID")) {
                 Science_B.Spot[0] = Science_B.name;
                 for (int j = 1; j < (Science_B.noStandardSpots + 1); j++) {
@@ -784,7 +793,7 @@ public class test {
             selectedFac = active.name;
         }
         else if (facultySelect.equals("Science") && parkAreaSelect.equals("C")) {
-            Science_C.name = "Science_C";
+            Science_C.name = "SC_C";
             active.noSpots = Science_C.noSpots;
             active.noStandardSpots = Science_C.noStandardSpots;
             active.noLongSpots = Science_C.noLongSpots;
@@ -792,6 +801,7 @@ public class test {
             active.SpotGPS=Science_C.SpotGPS;
             active.SpotDimensions=Science_C.SpotDimensions;
             active.Spotbuilding=Science_C.Spotbuilding;
+            active.name= Science_C.name;
             if (Science_C.Spot[0].equals("ID")) {
                 Science_C.Spot[0] = Science_C.name;
                 for (int j = 1; j < (Science_C.noStandardSpots + 1); j++) {
@@ -808,7 +818,7 @@ public class test {
             selectedFac = active.name;
         }
         else if (facultySelect.equals("Technology") && parkAreaSelect.equals("A")) {
-            Technology_A.name = "Technology_A";
+            Technology_A.name = "TC_A";
             active.noSpots = Technology_A.noSpots;
             active.noStandardSpots = Technology_A.noStandardSpots;
             active.noLongSpots = Technology_A.noLongSpots;
@@ -816,6 +826,7 @@ public class test {
             active.SpotGPS=Technology_A.SpotGPS;
             active.SpotDimensions=Technology_A.SpotDimensions;
             active.Spotbuilding=Technology_A.Spotbuilding;
+            active.name= Technology_A.name;
             if (Technology_A.Spot[0].equals("ID")) {
                 Technology_A.Spot[0] = Technology_A.name;
                 for (int j = 1; j < (Technology_A.noStandardSpots + 1); j++) {
@@ -833,7 +844,7 @@ public class test {
         }
 
         else if(facultySelect.equals("Law") && parkAreaSelect.equals("A")) {
-            Law_A.name="Law_A";
+            Law_A.name="LW_A";
             active.noSpots= Law_A.noSpots;
             active.noStandardSpots= Law_A.noStandardSpots;
             active.noLongSpots= Law_A.noLongSpots;
@@ -841,6 +852,7 @@ public class test {
             active.SpotGPS=Law_A.SpotGPS;
             active.SpotDimensions=Law_A.SpotDimensions;
             active.Spotbuilding=Law_A.Spotbuilding;
+            active.name= Law_A.name;
             if(Law_A.Spot[0].equals("ID")){
                 Law_A.Spot[0]= Law_A.name;
                 for (int j = 1; j < (Law_A.noStandardSpots + 1); j++) {
@@ -857,7 +869,7 @@ public class test {
             selectedFac=active.name;
         }
         else if(facultySelect.equals("Law") && parkAreaSelect.equals("B")) {
-            Law_B.name="Law_B";
+            Law_B.name="LW_B";
             active.noSpots= Law_B.noSpots;
             active.noStandardSpots= Law_B.noStandardSpots;
             active.noLongSpots= Law_B.noLongSpots;
@@ -865,6 +877,7 @@ public class test {
             active.SpotGPS=Law_B.SpotGPS;
             active.SpotDimensions=Law_B.SpotDimensions;
             active.Spotbuilding=Law_B.Spotbuilding;
+            active.name= Law_B.name;
             if(Law_B.Spot[0].equals("ID")){
                 Law_B.Spot[0]= Law_B.name;
                 for (int j = 1; j < (Law_B.noStandardSpots + 1); j++) {
@@ -881,7 +894,7 @@ public class test {
             selectedFac=active.name;
         }
         else if((facultySelect.equals("Engineering") && parkAreaSelect.equals("A"))){
-            Engineering_A.name="Engineering_A";
+            Engineering_A.name="EN_A";
             active.noSpots= Engineering_A.noSpots;
             active.noStandardSpots= Engineering_A.noStandardSpots;
             active.noLongSpots= Engineering_A.noLongSpots;
@@ -889,6 +902,7 @@ public class test {
             active.SpotGPS=Engineering_A.SpotGPS;
             active.SpotDimensions=Engineering_A.SpotDimensions;
             active.Spotbuilding=Engineering_A.Spotbuilding;
+            active.name= Engineering_A.name;
             if(Engineering_A.Spot[0].equals("ID")){
                 Engineering_A.Spot[0]= Engineering_A.name;
                 for (int j = 1; j < (Engineering_A.noStandardSpots + 1); j++) {
@@ -906,7 +920,7 @@ public class test {
         }
         else if(facultySelect.equals("Nursing") && parkAreaSelect.equals("A"))
         {
-            Nursing_A.name="Nursing_A";
+            Nursing_A.name="NS_A";
             active.noSpots= Nursing_A.noSpots;
             active.noStandardSpots= Nursing_A.noStandardSpots;
             active.noLongSpots= Nursing_A.noLongSpots;
@@ -914,6 +928,7 @@ public class test {
             active.SpotGPS=Nursing_A.SpotGPS;
             active.SpotDimensions=Nursing_A.SpotDimensions;
             active.Spotbuilding=Nursing_A.Spotbuilding;
+            active.name=Nursing_A.name;
             if(Nursing_A.Spot[0].equals("ID")){
                 Nursing_A.Spot[0]= Nursing_A.name;
                 for (int j = 1; j < (Nursing_A.noStandardSpots + 1); j++) {
@@ -931,7 +946,7 @@ public class test {
         }
         else if(facultySelect.equals("Medicine") && parkAreaSelect.equals("A"))
         {
-            Medicine_A.name="Medicine_A";
+            Medicine_A.name="MD_A";
             active.noSpots= Medicine_A.noSpots;
             active.noStandardSpots= Medicine_A.noStandardSpots;
             active.noLongSpots= Medicine_A.noLongSpots;
@@ -939,6 +954,7 @@ public class test {
             active.SpotGPS=Medicine_A.SpotGPS;
             active.SpotDimensions=Medicine_A.SpotDimensions;
             active.Spotbuilding=Medicine_A.Spotbuilding;
+            active.name= Medicine_A.name;
             if(Medicine_A.Spot[0].equals("ID")){
                 Medicine_A.Spot[0]= Medicine_A.name;
                 for (int j = 1; j < (Medicine_A.noStandardSpots + 1); j++) {
@@ -956,7 +972,7 @@ public class test {
         }
         else if(facultySelect.equals("Medicine") && parkAreaSelect.equals("B"))
         {
-            Medicine_B.name="Medicine_B";
+            Medicine_B.name="MD_B";
             active.noSpots= Medicine_B.noSpots;
             active.noStandardSpots= Medicine_B.noStandardSpots;
             active.noLongSpots= Medicine_B.noLongSpots;
@@ -964,6 +980,7 @@ public class test {
             active.SpotGPS=Medicine_B.SpotGPS;
             active.SpotDimensions=Medicine_B.SpotDimensions;
             active.Spotbuilding=Medicine_B.Spotbuilding;
+            active.name= Medicine_B.name;
             if(Medicine_B.Spot[0].equals("ID")){
                 Medicine_B.Spot[0]= Medicine_B.name;
                 for (int j = 1; j < (Medicine_B.noStandardSpots + 1); j++) {
@@ -981,7 +998,7 @@ public class test {
         }
         else if(facultySelect.equals("UCSC") && parkAreaSelect.equals("A"))
         {
-            UCSC_A.name="UCSC";
+            UCSC_A.name="UC_A";
             active.noSpots= UCSC_A.noSpots;
             active.noStandardSpots= UCSC_A.noStandardSpots;
             active.noLongSpots= UCSC_A.noLongSpots;
@@ -989,6 +1006,7 @@ public class test {
             active.SpotGPS=UCSC_A.SpotGPS;
             active.SpotDimensions=UCSC_A.SpotDimensions;
             active.Spotbuilding=UCSC_A.Spotbuilding;
+            active.name=UCSC_A.name;
             if(UCSC_A.Spot[0].equals("ID")){
                 UCSC_A.Spot[0]= UCSC_A.name;
                 for (int j = 1; j < (UCSC_A.noStandardSpots + 1); j++) {
@@ -1006,7 +1024,7 @@ public class test {
         }
         else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("A"))
         {
-            Sripalee_A.name="Sripalee Campus";
+            Sripalee_A.name="SP_A";
             active.noSpots= Sripalee_A.noSpots;
             active.noStandardSpots= Sripalee_A.noStandardSpots;
             active.noLongSpots= Sripalee_A.noLongSpots;
@@ -1014,6 +1032,7 @@ public class test {
             active.SpotGPS=Sripalee_A.SpotGPS;
             active.SpotDimensions=Sripalee_A.SpotDimensions;
             active.Spotbuilding=Sripalee_A.Spotbuilding;
+            active.name= Sripalee_A.name;
             if(Sripalee_A.Spot[0].equals("ID")){
                 Sripalee_A.Spot[0]= Sripalee_A.name;
                 for (int j = 1; j < (Sripalee_A.noStandardSpots + 1); j++) {
@@ -1031,7 +1050,7 @@ public class test {
         }
         else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("B"))
         {
-            Sripalee_B.name="Sripalee Campus";
+            Sripalee_B.name="SP_B";
             active.noSpots= Sripalee_B.noSpots;
             active.noStandardSpots= Sripalee_B.noStandardSpots;
             active.noLongSpots= Sripalee_B.noLongSpots;
@@ -1039,6 +1058,7 @@ public class test {
             active.SpotGPS=Sripalee_B.SpotGPS;
             active.SpotDimensions=Sripalee_B.SpotDimensions;
             active.Spotbuilding=Sripalee_B.Spotbuilding;
+            active.name= Sripalee_B.name;
             if(Sripalee_B.Spot[0].equals("ID")){
                 Sripalee_B.Spot[0]= Sripalee_B.name;
                 for (int j = 1; j < (Sripalee_B.noStandardSpots + 1); j++) {
@@ -1056,7 +1076,7 @@ public class test {
         }
         else if(facultySelect.equals("Sripalee") && parkAreaSelect.equals("C"))
         {
-            Sripalee_C.name="Sripalee Campus";
+            Sripalee_C.name="SP_C";
             active.noSpots= Sripalee_C.noSpots;
             active.noStandardSpots= Sripalee_C.noStandardSpots;
             active.noLongSpots= Sripalee_C.noLongSpots;
@@ -1064,6 +1084,7 @@ public class test {
             active.SpotGPS=Sripalee_C.SpotGPS;
             active.SpotDimensions=Sripalee_C.SpotDimensions;
             active.Spotbuilding=Sripalee_C.Spotbuilding;
+            active.name= Sripalee_C.name;
             if(Sripalee_C.Spot[0].equals("ID")){
                 Sripalee_C.Spot[0]= Sripalee_C.name;
                 for (int j = 1; j < (Sripalee_C.noStandardSpots + 1); j++) {
@@ -1159,7 +1180,7 @@ public class test {
         parkC.setVisible(false);
     }
 
-
+//check in vehicle,show allocated spot and update lists and display
     @FXML
     void onClickEnter(ActionEvent event)
     {
@@ -1170,18 +1191,18 @@ public class test {
             while (i < (active.noSpots+1) ){
                 if (active.Spot[i].equals(PType)) {
                     if(PType.equals("standard")){
-                        PSpotDisplay.setText("S"+(String.valueOf(i)));
+                        PSpotDisplay.setText(active.name+"_S"+(String.valueOf(i)));
                         dimensions1.setVisible(false);
                         NBuilding1.setVisible(false);
                     }
                     if(PType.equals("long vehicle")){
-                        PSpotDisplay.setText("L"+(String.valueOf(i- active.noStandardSpots)));
+                        PSpotDisplay.setText(active.name+"_L"+(String.valueOf(i- active.noStandardSpots)));
                         dimensions.setText(active.SpotDimensions[i]);
                         dimensions1.setVisible(true);
                         NBuilding1.setVisible(false);
                     }
                     if(PType.equals("handicapped")){
-                        PSpotDisplay.setText("H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
+                        PSpotDisplay.setText(active.name+"_H"+(String.valueOf(i- active.noStandardSpots- active.noLongSpots)));
                         dimensions1.setVisible(false);
                         NBuilding1.setVisible(true);
                         NBuilding.setText(active.Spotbuilding[i]);
@@ -1192,7 +1213,7 @@ public class test {
                     break;
                 }
                 else {
-                    PSpotDisplay.setText("no space");
+                    PSpotDisplay.setText("No Space");
                     GPS.setText("");
                 }
                 i = i + 1;
@@ -1295,7 +1316,7 @@ public class test {
         PSpotDisplay1.setText(PSID9.getText());
         TypeDisplay.setText(displayType9.getText());
     }
-
+//checkout function.remove checkout vehicles and update relevant list
     @FXML
     void onClickCheckOut(ActionEvent event) {
         if(checkOut<(active.noStandardSpots+1)) {
@@ -1335,7 +1356,7 @@ public class test {
     void onSelectC(ActionEvent event) {
         parkAreaSelect="C";
         parkSelect.setText("C");
-
+//clear details
     }
     @FXML
     void onClickDone(ActionEvent event) {
