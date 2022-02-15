@@ -1196,6 +1196,7 @@ public class test {
                     }
                     if(PType.equals("long vehicle")){
                         PSpotDisplay.setText(active.name+"_L"+(String.valueOf(i- active.noStandardSpots)));
+                        dimensions.setVisible(true);
                         dimensions.setText(active.SpotDimensions[i]);
                         dimensions1.setVisible(true);
                         NBuilding1.setVisible(false);
